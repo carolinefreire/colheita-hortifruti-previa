@@ -1,0 +1,185 @@
+{
+  "reference_sha": "ca2f5a3b7a700fd1dc53c70e69808bfd89f17829",
+  "assets": [
+    {
+      "id": "marca/logo-principal",
+      "crop": [
+        40,
+        25,
+        432,
+        420
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 60,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "marca/logo-horizontal",
+      "crop": [
+        463,
+        80,
+        840,
+        213
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 62,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "marca/icone-fundo-marrom",
+      "crop": [
+        474,
+        247,
+        648,
+        418
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 23,
+      "faixa_corrigida": true
+    },
+    {
+      "id": "marca/icone-fundo-creme",
+      "crop": [
+        656,
+        247,
+        832,
+        418
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 20,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "marca/monograma-claro",
+      "crop": [
+        885,
+        226,
+        1040,
+        381
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 19,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "marca/monograma-escuro",
+      "crop": [
+        1048,
+        215,
+        1206,
+        387
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 26,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "icones-oficiais/produtos",
+      "crop": [
+        681,
+        483,
+        787,
+        551
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 11,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "icones-oficiais/pedidos",
+      "crop": [
+        853,
+        480,
+        951,
+        551
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 6,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "icones-oficiais/retirada",
+      "crop": [
+        1008,
+        480,
+        1105,
+        550
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 7,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "icones-oficiais/promocoes",
+      "crop": [
+        1149,
+        479,
+        1252,
+        550
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 10,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "icones-oficiais/favoritos",
+      "crop": [
+        1282,
+        480,
+        1391,
+        550
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 1,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "icones-oficiais/conta",
+      "crop": [
+        1424,
+        480,
+        1521,
+        550
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 2,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "elementos/folhas",
+      "crop": [
+        45,
+        673,
+        260,
+        831
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 65,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "elementos/faixas-campo",
+      "crop": [
+        265,
+        672,
+        473,
+        833
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 19,
+      "faixa_corrigida": null
+    },
+    {
+      "id": "elementos/paisagem-sol",
+      "crop": [
+        480,
+        672,
+        676,
+        833
+      ],
+      "estado": "rascunho pendente de conferencia visual",
+      "contornos": 33,
+      "faixa_corrigida": null
+    }
+  ]
+}
