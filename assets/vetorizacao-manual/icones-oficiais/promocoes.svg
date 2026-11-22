@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 71" role="img" aria-label="Ícone promocoes da Colheita em revisão manual">
+<!-- Revisão manual fiel à linguagem gráfica, ainda não é substituto aprovado do painel oficial. -->
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 17 36 L 46 6 L 85 6 Q 88 6 88 10 V 47 L 57 67 Z" stroke="#5B2E08" stroke-width="3.1"/>
+<circle cx="76" cy="18" r="5" stroke="#5B2E08" stroke-width="2.6"/>
+<path d="M 44 49 L 65 27" stroke="#E85D2A" stroke-width="3.3"/>
+<circle cx="44" cy="29" r="4.5" stroke="#E85D2A" stroke-width="2.4"/>
+<circle cx="65" cy="49" r="4.5" stroke="#E85D2A" stroke-width="2.4"/>
+</g>
+</svg>

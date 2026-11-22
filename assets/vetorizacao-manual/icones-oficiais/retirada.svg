@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 70" role="img" aria-label="Ícone retirada da Colheita em revisão manual">
+<!-- Revisão manual fiel à linguagem gráfica, ainda não é substituto aprovado do painel oficial. -->
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M 48 4 C 36 4 29 12 29 23 C 29 35 40 44 48 51 C 56 44 67 35 67 23 C 67 12 60 4 48 4 Z" stroke="#E85D2A" stroke-width="4"/>
+<circle cx="48" cy="23" r="7" stroke="#E85D2A" stroke-width="3.5"/>
+<path d="M 31 45 C 22 50 16 54 16 59 C 16 66 80 66 80 59 C 80 54 74 50 66 45" stroke="#5B2E08" stroke-width="3"/>
+</g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 68" role="img" aria-label="Ícone produtos da Colheita em revisão manual">
+<!-- Revisão manual fiel à linguagem gráfica, ainda não é substituto aprovado do painel oficial. -->
+<g stroke-linejoin="round" stroke-linecap="round">
+<path d="M 17 32 H 89 L 80 58 C 79 60 76 61 73 61 H 33 C 29 61 27 60 26 57 Z" fill="none" stroke="#5B2E08" stroke-width="3.2"/>
+<path d="M 16 32 H 90" stroke="#5B2E08" stroke-width="3.4"/>
+<path d="M 31 31 C 23 22 26 18 34 17 C 35 9 44 9 46 16 C 52 13 58 18 55 25" fill="none" stroke="#68BF2A" stroke-width="2.5"/>
+<path d="M 37 28 C 37 21 42 20 45 24 M 38 30 L 32 23" fill="none" stroke="#68BF2A" stroke-width="2.2"/>
+<path d="M 46 31 C 43 23 48 20 53 21 C 55 12 62 11 67 18 C 74 16 79 21 77 30" fill="none" stroke="#68BF2A" stroke-width="2.7"/>
+<path d="M 50 29 L 58 25 L 62 29 M 58 25 L 61 19" fill="none" stroke="#68BF2A" stroke-width="2"/>
+<path d="M 66 29 Q 63 24 68 24 Q 75 19 80 26 L 82 31 Z" stroke="#E85D2A" fill="#E85D2A" stroke-width="1.2"/>
+<path d="M 63 29 Q 59 23 62 21 M 75 27 Q 75 23 78 22" fill="none" stroke="#F6A623" stroke-width="2"/>
+</g>
+</svg>
