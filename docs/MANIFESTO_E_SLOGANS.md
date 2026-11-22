@@ -14,11 +14,13 @@ Porque uma mesa cheia de vida começa com escolhas mais simples.
 
 ## Slogans candidatos (em avaliação)
 
-**Favoritos da rodada atual:**
+**Candidata principal em avaliação:** **Sua Colheita sem sair de casa.**
 
-1. **Sua feira, sem a fila.** (candidata; rima curta e benefício claro)
-2. **Da banca pra sua bancada.** (candidata; jogo de palavras)
-3. **Mais feira. Menos correria.** (candidata; praticidade e ritmo)
+**Outras candidatas preservadas:**
+
+1. **Sua feira, sem a fila.** (rima curta; benefício da fila menos relevante)
+2. **Da banca pra sua bancada.** (jogo de palavras)
+3. **Mais feira. Menos correria.** (praticidade e ritmo)
 
 **Proposta anterior, em reavaliação:** “Da horta pra sua porta.” Não é um slogan aprovado.
 
