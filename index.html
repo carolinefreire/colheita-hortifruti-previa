@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Colheita Hortifruti | Design System</title><meta name="color-scheme" content="light">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brown:#5B2E08;--orange:#E85D2A;--yellow:#F6A623;--green:#68BF2A;--cream:#FFF3E6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--brown);font:16px/1.5 'Nunito',Arial,sans-serif}
+h1,h2,h3{font-family:'Baloo 2','Trebuchet MS',sans-serif;line-height:1.12;margin:.2rem 0 .7rem}h1{font-size:clamp(2.8rem,7vw,5rem)}h2{font-size:clamp(2rem,4vw,3rem)}
+a{color:inherit}header{padding:18px max(22px,calc((100vw - 1100px)/2));display:flex;gap:15px;justify-content:space-between;align-items:center;border-bottom:1px solid #dfc5b0;background:#fff6ed;flex-wrap:wrap}
+nav{display:flex;gap:17px;flex-wrap:wrap;font-size:.9rem;font-weight:900}nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+main{max-width:1100px;margin:auto;padding:40px 22px 70px}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:900;color:var(--orange)}
+.intro{display:grid;grid-template-columns:1fr .86fr;gap:32px;align-items:center}.note{color:#805a40}.hero-card{border-radius:26px;box-shadow:0 18px 40px #5b2e081b;overflow:hidden;background:white;border:1px solid #e4c9b3}
+.hero-card img{width:100%;height:auto;display:block}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.button{display:inline-flex;min-height:48px;align-items:center;justify-content:center;background:var(--brown);color:var(--cream);text-decoration:none;border-radius:12px;font-weight:900;padding:12px 19px}.button.secondary{border:1.5px solid var(--brown);background:transparent;color:var(--brown)}
+.status{display:inline-flex;background:#f6e3cc;border-radius:99px;padding:7px 12px;font-weight:800;font-size:.8rem}.swatches{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:22px 0 35px}.swatch{border-radius:16px;padding:12px 7px;background:#fffaf4;border:1px solid #e2c9b3;text-align:center;font-size:12px;font-weight:800;word-wrap:break-word}.dot{width:100%;height:80px;border-radius:12px;margin-bottom:9px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.tile{padding:24px;background:#fff7ed;border:1px solid #e6cdb8;border-radius:22px}.tile h3{font-size:26px}.tile p{color:#805a40;margin:0 0 14px}.tile a{font-weight:900}
+aside{background:#f6e6cf;border-left:5px solid var(--green);padding:20px;border-radius:4px 16px 16px 4px;margin:32px 0}
+footer{border-top:1px solid #e4cab5;padding:25px;text-align:center;color:#7b553a;font-size:13px}
+@media(max-width:800px){.intro{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.swatches{gap:5px}.swatch{font-size:10px;padding:6px}.dot{height:46px}main{padding-top:24px}}
+</style></head><body>
+<header><strong>🌾 Colheita Hortifruti <span style="font-weight:600;font-size:.8rem">/ documentação visual</span></strong><nav aria-label="Navegação"><a href="#identidade">Identidade</a><a href="#biblioteca">Biblioteca</a><a href="site/home.html">Home</a><a href="site/design-system.html">Design system</a></nav></header>
+<main>
+<section class="intro" id="identidade"><div><span class="eyebrow">Design system · v2 · revisão</span><h1>Uma marca viva.<br>Um sistema coerente.</h1><p>Fundamentos visuais aprovados e componentes digitais organizados para evoluir a Colheita Hortifruti.</p><span class="status">Identidade oficial preservada · Componentes em validação</span><div class="actions"><a class="button" href="site/design-system.html">Explorar design system</a><a class="button secondary" href="site/home.html">Ver protótipo da home</a></div><p class="note">Slogans e manifesto ainda são propostas. Fotos, preços e pedidos na home não representam dados operacionais.</p></div><div class="hero-card"><img src="assets/brand/painel-identidade-aprovado.jpg" alt="Painel de identidade oficial aprovado, com logotipo, cores, tipografia, ícones e aplicações da Colheita Hortifruti"></div></section>
+<section><h2>Cores oficiais</h2><div class="swatches"><div class="swatch"><div class="dot" style="background:#5B2E08"></div>Marrom<br>#5B2E08</div><div class="swatch"><div class="dot" style="background:#E85D2A"></div>Laranja<br>#E85D2A</div><div class="swatch"><div class="dot" style="background:#F6A623"></div>Amarelo<br>#F6A623</div><div class="swatch"><div class="dot" style="background:#68BF2A"></div>Verde<br>#68BF2A</div><div class="swatch"><div class="dot" style="background:#FFF3E6;border:1px solid #ddc1a3"></div>Creme<br>#FFF3E6</div></div></section>
+<section id="biblioteca"><h2>Biblioteca organizada</h2><div class="grid">
+<article class="tile"><h3>Identidade</h3><p>O painel aprovado é a referência principal, com a composição original intacta.</p><a href="assets/brand/painel-identidade-aprovado.jpg">Consultar painel</a></article>
+<article class="tile"><h3>Interface</h3><p>Ícones auxiliares, etiquetas, botões, espaçamento, estados e protótipo móvel.</p><a href="site/design-system.html">Ver componentes</a></article>
+<article class="tile"><h3>Voz da marca</h3><p>Personalidade e manifesto propostos, com slogans candidatos aguardando escolha.</p><a href="docs/MANIFESTO_E_SLOGANS.md">Ler propostas</a></article>
+</div></section><aside><strong>Importante:</strong> etiquetas “Orgânico” nesta biblioteca são propostas informativas. Sua aplicação depende da comprovação da condição orgânica de cada produto. Não substituem identificação oficial.</aside>
+
+<section id="voz" style="margin-top:45px">
+  <span class="eyebrow">Proposta para aprovação</span>
+  <h2>O jeito Colheita de ser</h2>
+  <p>Fresca, próxima, confiável, prática e alegre sem exageros. Uma voz que facilita a rotina, informa com clareza e respeita o que cada produto realmente oferece.</p>
+  <div class="grid">
+    <article class="tile"><h3>Personalidade</h3><p>Uma boa conversa de feira: atenção ao detalhe, linguagem simples e confiança na informação.</p><a href="docs/PERSONALIDADE_E_TOM.md">Ver tom de voz</a></article>
+    <article class="tile"><h3>Manifesto</h3><p>“Acreditamos que escolher bem não deveria ser complicado. Que frescor tem a ver com cuidado, informação e confiança.”</p><a href="docs/MANIFESTO_E_SLOGANS.md">Ler texto completo</a></article>
+    <article class="tile"><h3>Slogan</h3><p>Proposta inicial: “O bom da feira no seu dia.” Outras quatro opções estão documentadas, e nenhuma foi oficializada.</p><a href="docs/MANIFESTO_E_SLOGANS.md">Comparar propostas</a></article>
+  </div>
+</section>
+<section><h2>O sistema em ação</h2><p>Explore a primeira proposta da home, baseada na linguagem visual da Colheita, sem inventar catálogo ou preços reais.</p><div class="actions"><a class="button" href="site/home.html">Abrir home do aplicativo</a><a class="button secondary" href="docs/PERSONALIDADE_E_TOM.md">Ver personalidade proposta</a></div></section>
+</main><footer>Colheita Hortifruti · Design System v2 · Identidade aprovada, interface e conteúdo em revisão</footer>
+</body></html>

@@ -1,0 +1,50 @@
+/* Colheita Hortifruti · Design System v1.0
+   Cores e famílias tipográficas: IDENTIDADE OFICIAL, INALTERADA.
+   Escalas, efeitos e papéis semânticos: PROPOSTAS TÉCNICAS.
+   Este arquivo não recria logos, monograma ou ícones do painel. */
+:root {
+  --ch-brown: #5B2E08;
+  --ch-orange: #E85D2A;
+  --ch-yellow: #F6A623;
+  --ch-green: #68BF2A;
+  --ch-cream: #FFF3E6;
+
+  --ch-bg: var(--ch-cream);
+  --ch-text: var(--ch-brown);
+  --ch-primary: var(--ch-brown);
+  --ch-on-primary: var(--ch-cream);
+  --ch-border: rgb(91 46 8 / 23%);
+  --ch-soft: rgb(91 46 8 / 6%);
+  --ch-soft-hover: rgb(91 46 8 / 11%);
+  --ch-focus: rgb(91 46 8 / 80%);
+  --ch-font-title: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --ch-font-body: 'Nunito', Arial, system-ui, sans-serif;
+
+  --ch-space-0: 0px;
+  --ch-space-4: 4px;
+  --ch-space-8: 8px;
+  --ch-space-12: 12px;
+  --ch-space-16: 16px;
+  --ch-space-20: 20px;
+  --ch-space-24: 24px;
+  --ch-space-32: 32px;
+  --ch-space-40: 40px;
+  --ch-space-48: 48px;
+  --ch-space-64: 64px;
+
+  --ch-radius-sm: 8px;
+  --ch-radius-md: 12px;
+  --ch-radius-lg: 18px;
+  --ch-radius-xl: 24px;
+  --ch-radius-pill: 999px;
+
+  --ch-font-xs: 12px;
+  --ch-font-sm: 14px;
+  --ch-font-md: 16px;
+  --ch-font-lg: 18px;
+  --ch-font-xl: 22px;
+  --ch-font-2xl: 28px;
+  --ch-font-3xl: 36px;
+  --ch-hit-area: 44px;
+  --ch-hit-area-comfort: 48px;
+}

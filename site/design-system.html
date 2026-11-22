@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
+  <title>Colheita Hortifruti · Design System 2.0</title>
+  <!-- Fontes oficiais carregam online quando disponíveis; a prévia e os estilos funcionam offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style id="tokens-embutidos">
+/* Colheita Hortifruti · Design System v2.0
+   Cores e famílias tipográficas: IDENTIDADE OFICIAL, INALTERADA.
+   Escalas, efeitos e papéis semânticos: PROPOSTAS TÉCNICAS.
+   Este arquivo não recria logos, monograma ou ícones do painel. */
+:root {
+  --ch-brown: #5B2E08;
+  --ch-orange: #E85D2A;
+  --ch-yellow: #F6A623;
+  --ch-green: #68BF2A;
+  --ch-cream: #FFF3E6;
+
+  --ch-bg: var(--ch-cream);
+  --ch-text: var(--ch-brown);
+  --ch-primary: var(--ch-brown);
+  --ch-on-primary: var(--ch-cream);
+  --ch-border: rgb(91 46 8 / 23%);
+  --ch-soft: rgb(91 46 8 / 6%);
+  --ch-soft-hover: rgb(91 46 8 / 11%);
+  --ch-focus: rgb(91 46 8 / 80%);
+  --ch-font-title: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --ch-font-body: 'Nunito', Arial, system-ui, sans-serif;
+
+  --ch-space-0: 0px;
+  --ch-space-4: 4px;
+  --ch-space-8: 8px;
+  --ch-space-12: 12px;
+  --ch-space-16: 16px;
+  --ch-space-20: 20px;
+  --ch-space-24: 24px;
+  --ch-space-32: 32px;
+  --ch-space-40: 40px;
+  --ch-space-48: 48px;
+  --ch-space-64: 64px;
+
+  --ch-radius-sm: 8px;
+  --ch-radius-md: 12px;
+  --ch-radius-lg: 18px;
+  --ch-radius-xl: 24px;
+  --ch-radius-pill: 999px;
+
+  --ch-font-xs: 12px;
+  --ch-font-sm: 14px;
+  --ch-font-md: 16px;
+  --ch-font-lg: 18px;
+  --ch-font-xl: 22px;
+  --ch-font-2xl: 28px;
+  --ch-font-3xl: 36px;
+  --ch-hit-area: 44px;
+  --ch-hit-area-comfort: 48px;
+}
+
+</style>
+  <style id="componentes-embutidos">
+/* Componentes experimentais; são arquitetura de interface, NÃO extensões oficiais da marca. */
+.ch-btn {
+  appearance: none; border: 1px solid var(--ch-brown); border-radius: var(--ch-radius-md);
+  min-height: var(--ch-hit-area-comfort); display: inline-flex; gap: 8px; align-items: center;
+  justify-content: center; padding: 10px 20px; background: var(--ch-brown);
+  color: var(--ch-cream); font: 800 16px/1.15 var(--ch-font-body); cursor: pointer;
+  transition: background-color .2s, transform .1s;
+}
+.ch-btn:hover:not(:disabled){ background: #492406; }
+.ch-btn:active:not(:disabled){ transform: translateY(1px); }
+.ch-btn:focus-visible,.ch-input:focus-visible,.ch-chip:focus-visible {
+  outline: 3px solid var(--ch-focus); outline-offset: 3px;
+}
+.ch-btn--outline { background: transparent; color: var(--ch-brown); }
+.ch-btn--outline:hover:not(:disabled) { background: var(--ch-soft); }
+.ch-btn--quiet { background: var(--ch-soft); border-color: transparent; color: var(--ch-brown); }
+.ch-btn--quiet:hover:not(:disabled) { background: var(--ch-soft-hover); }
+.ch-btn:disabled { cursor: not-allowed; opacity: .48; }
+.ch-input {
+  display: block; width:100%; min-height: 48px; border:1.5px solid var(--ch-border);
+  border-radius:var(--ch-radius-md); color:var(--ch-brown); background:var(--ch-cream);
+  padding:10px 14px; font: 600 16px/1.3 var(--ch-font-body);
+}
+.ch-input::placeholder{ color: rgb(91 46 8 / 60%); }
+.ch-label { font:800 14px/1.4 var(--ch-font-body); display:block; margin-bottom:8px; }
+.ch-help { font: 600 13px/1.5 var(--ch-font-body); }
+.ch-chip { min-height:36px; border:1px solid var(--ch-border); border-radius:var(--ch-radius-pill);
+  padding:7px 13px; color:var(--ch-brown); background:var(--ch-cream); font:800 14px/1.2 var(--ch-font-body); cursor:pointer; }
+.ch-chip[aria-pressed='true'] { background:var(--ch-brown); border-color:var(--ch-brown); color:var(--ch-cream); }
+.ch-card { border:1px solid var(--ch-border); border-radius:var(--ch-radius-lg); overflow:hidden; background:var(--ch-cream); }
+.ch-card__body { padding:16px; }
+.ch-title { font-family:var(--ch-font-title); color:var(--ch-brown); font-weight:700; }
+.ch-text { font-family:var(--ch-font-body); color:var(--ch-brown); }
+.ch-price { font:900 22px/1.2 var(--ch-font-body); color:var(--ch-brown); }
+.ch-tag { display:inline-flex; align-items:center; border-radius:999px; background:var(--ch-yellow);
+  color:var(--ch-brown); padding:6px 10px; font:900 12px/1.25 var(--ch-font-body); }
+.ch-tag--green { background:var(--ch-green); color:var(--ch-brown); }
+.ch-progress { display:flex; align-items:center; gap:7px; width:100%; }
+.ch-progress > span { flex:1; min-height:6px; background:var(--ch-soft-hover); border-radius:999px; }
+.ch-progress > span[data-done] { background:var(--ch-green); }
+@media(prefers-reduced-motion: reduce) {
+  .ch-btn { transition:none; }
+}
+
+</style>
+  <style>
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ch-cream);color:var(--ch-brown);font:500 16px/1.55 var(--ch-font-body)}
+    h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{font-family:var(--ch-font-title);font-weight:700;line-height:1.17;letter-spacing:-.02em}h1{font-size:clamp(42px,5.3vw,76px)}h2{font-size:clamp(28px,3.3vw,42px)}h3{font-size:24px}p{max-width:70ch}a{color:inherit}button,input{font-family:inherit}strong{font-weight:900}code{font-size:.92em;word-break:break-word}
+    .shell{max-width:1240px;margin:auto;padding:0 26px}
+    .banner{background:var(--ch-brown);color:var(--ch-cream);padding:14px 0;font-weight:800;font-size:13px;letter-spacing:.02em}
+    .banner .shell{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .dot{height:8px;width:8px;display:inline-block;border-radius:999px;background:var(--ch-green);margin-right:8px}
+    .mark{border:1px solid rgb(255 243 230 / 27%);border-radius:999px;padding:4px 11px;white-space:nowrap;font-size:12px}
+    .hero{padding:68px 0 58px;position:relative;overflow:hidden;border-bottom:1px solid var(--ch-border)}
+    .hero::after{content:'';position:absolute;right:-8%;bottom:-150px;width:44%;height:230px;border:50px solid var(--ch-yellow);border-radius:100%;opacity:.26;transform:rotate(-17deg);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center}
+    .eyebrow{color:var(--ch-brown);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.17em;margin-bottom:16px}
+    .lead{font-size:19px;line-height:1.55;margin:17px 0 25px;max-width:55ch}
+    .smallnote{font-size:13px;opacity:.82;line-height:1.5}
+    .pill{display:inline-flex;border:1px solid var(--ch-border);border-radius:999px;padding:6px 12px;gap:8px;align-items:center;font-size:13px;font-weight:800}
+    .pill::before{content:'';width:7px;height:7px;background:var(--ch-orange);border-radius:100%}
+    .hero-panel{padding:23px;background:rgb(91 46 8 / 4%);border:1px solid var(--ch-border);border-radius:28px;position:relative;z-index:1}
+    .hero-panel-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:18px}
+    .hero-panel-head strong{font-size:14px}.mini-pal{display:flex;height:68px;border-radius:16px;overflow:hidden;border:2px solid var(--ch-cream)}.mini-pal>span{flex:1}
+    .mini-list{display:grid;gap:9px;margin-top:18px}.mini-list>div{display:flex;justify-content:space-between;gap:15px;padding:8px 0;border-bottom:1px solid var(--ch-border);font-size:14px}.mini-list b{font-weight:900}
+    .bar{position:sticky;top:0;background:rgb(255 243 230 / 98%);border-bottom:1px solid var(--ch-border);z-index:10;overflow:auto;box-shadow:0 6px 18px rgb(91 46 8 / 4%)}.nav{display:flex;gap:4px;padding:10px 0;min-width:max-content}.nav a{padding:9px 13px;border-radius:9px;text-decoration:none;font-weight:900;font-size:14px}.nav a:hover,.nav a:focus-visible{background:var(--ch-soft);outline-offset:2px}
+    main{padding:36px 0 80px}.section{scroll-margin-top:92px;padding:44px 0 60px;border-bottom:1px solid var(--ch-border)}.sect-head{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:27px}.sect-head p{font-size:16px;max-width:620px;margin-top:10px}.number{font:900 13px/1 var(--ch-font-body);color:var(--ch-orange);white-space:nowrap;border:1px solid var(--ch-border);padding:10px 12px;border-radius:999px}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.five{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+    .panel{background:rgb(255 243 230 / 76%);border:1px solid var(--ch-border);border-radius:var(--ch-radius-xl);padding:22px}.panel h3{margin-bottom:13px}.muted{opacity:.8}.mono{font:800 12px/1.4 ui-monospace,Consolas,monospace}
+    .swatch{border:1px solid var(--ch-border);border-radius:20px;overflow:hidden}.swatch-color{height:130px}.swatch-data{padding:13px 12px 16px}.swatch strong{display:block;font-size:15px}.swatch .mono{display:block;margin-top:3px}.swatch .smallnote{display:block;margin-top:9px;min-height:40px}
+    .status{font:900 11px/1.3 var(--ch-font-body);text-transform:uppercase;letter-spacing:.1em;padding:6px 10px;background:var(--ch-yellow);border-radius:999px;white-space:nowrap;display:inline-block}
+    .status.neutral{background:rgb(91 46 8 / 8%)}
+    .type-sample{padding:16px 0;border-bottom:1px solid var(--ch-border)}.type-sample:last-child{border-bottom:0}.type-sample .tag{font-weight:900;font-size:12px;opacity:.67;letter-spacing:.03em;display:block;margin-bottom:9px}
+    .scale{display:flex;flex-wrap:wrap;align-items:flex-end;gap:9px;min-height:100px}.scale .barspace{background:var(--ch-orange);border-radius:6px 6px 0 0;min-width:36px}.scale .item{text-align:center;font-size:11px;font-weight:900}.scale .item b{display:block;margin-top:6px}
+    .radii{display:flex;flex-wrap:wrap;gap:13px}.radii>.r{height:83px;width:104px;border:2px solid var(--ch-brown);display:flex;align-items:center;justify-content:center;background:var(--ch-soft);font-size:12px;font-weight:900}
+    .contrast-table{width:100%;border-collapse:collapse;font-size:14px}.contrast-table th,.contrast-table td{padding:13px 10px;text-align:left;border-bottom:1px solid var(--ch-border)}.contrast-table th{font-size:12px;text-transform:uppercase;letter-spacing:.08em}.yes,.no{font-weight:900}.yes{color:var(--ch-brown)}.no{color:var(--ch-orange)}
+    .components{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.componentgroup{margin-bottom:25px}.componentgroup:last-child{margin:0}.componentgroup h4{font-size:19px;margin-bottom:12px}
+    .fieldgroup{max-width:330px}.chiprow{display:flex;flex-wrap:wrap;gap:8px}.promobox{border-radius:18px;background:var(--ch-yellow);color:var(--ch-brown);padding:16px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between}.promobox b{font-weight:900}
+    .phonewrap{display:flex;justify-content:center;align-items:center}.phone{width:100%;max-width:350px;border:7px solid var(--ch-brown);border-radius:36px;background:var(--ch-cream);box-shadow:15px 25px 0 rgb(91 46 8 / 7%);overflow:hidden}.phonehead{padding:22px 17px 16px;border-bottom:1px solid var(--ch-border)}.phonestatus{display:flex;justify-content:space-between;font-size:10px;font-weight:900;letter-spacing:.05em;margin-bottom:16px}.phonehead h3{font-size:27px}.search{padding:10px 12px;background:var(--ch-soft);border-radius:11px;color:rgb(91 46 8 / 70%);font-size:13px;margin-top:13px}
+    .products{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:13px}.prod{background:rgb(91 46 8 / 3%);border:1px solid var(--ch-border);border-radius:16px;overflow:hidden}.prodimg{height:98px;background:repeating-linear-gradient(145deg,rgb(91 46 8 / 4%),rgb(91 46 8 / 4%) 8px,transparent 8px,transparent 16px);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;text-align:center;line-height:1.35;padding:12px;opacity:.75}.prodbody{padding:10px}.prodbody b{display:block;font-weight:900;font-size:12px}.prodbody small{font-size:11px}.prodfoot{margin-top:8px;display:flex;align-items:center;justify-content:space-between;gap:4px}.prodfoot strong{font-size:14px}.roundbtn{width:30px;height:30px;display:grid;place-items:center;border-radius:9px;border:0;background:var(--ch-brown);color:var(--ch-cream);font-size:19px;cursor:pointer}
+    .phonenav{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:12px 4px 15px;border-top:1px solid var(--ch-border);font-size:10px;text-align:center}.phonenav span{font-weight:900}.phonenav span:first-child{border-top:3px solid var(--ch-brown);padding-top:4px}
+    .screen-note{max-width:360px;font-size:13px;margin:25px auto 0;text-align:center}
+    .rules{display:grid;gap:10px}.rule{border-left:4px solid var(--ch-green);padding:9px 13px;background:var(--ch-soft);border-radius:0 10px 10px 0;font-size:14px}.rule.warning{border-color:var(--ch-orange)}
+    .original{min-height:260px;display:flex;align-items:center;justify-content:center;border:2px dashed var(--ch-border);background:var(--ch-soft);border-radius:19px;padding:24px;text-align:center}.original img{max-width:100%;height:auto;border-radius:12px}.original p{margin:auto;max-width:390px}.upload{display:flex;flex-wrap:wrap;gap:10px;margin-top:13px}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+    .tokens{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.token{padding:14px;border:1px solid var(--ch-border);border-radius:14px;background:var(--ch-soft)}.token b{display:block;margin-bottom:4px;font-weight:900}.token code{font-size:12px}
+    .foot{padding:35px 0;background:var(--ch-brown);color:var(--ch-cream)}.foot-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.foot small{font-size:12px;max-width:70ch}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:30px}.hero-panel{max-width:600px}.five{grid-template-columns:repeat(3,1fr)}.three{grid-template-columns:1fr 1fr}.shell{padding:0 19px}}
+    @media(max-width:600px){.hero{padding:40px 0 32px}.two,.three{grid-template-columns:1fr}.five{grid-template-columns:repeat(2,1fr)}.swatch-color{height:95px}.sect-head{display:block}.number{margin-top:10px}.section{padding:34px 0 44px}.banner{font-size:11px}.banner .mark{display:none}.foot-inner{display:block}.foot small{display:block;margin-top:12px}.contrast-table{font-size:12px}.contrast-table th,.contrast-table td{padding:11px 5px}.tokens{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{.bar,.upload,.banner{display:none!important}.section{break-inside:avoid}body{print-color-adjust:exact;-webkit-print-color-adjust:exact}.shell{max-width:none}.phone{box-shadow:none}}
+  </style>
+<style>
+.logo-crop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.logo-crop-grid figure{margin:0;border:1px solid var(--ch-border);border-radius:18px;background:var(--ch-cream);padding:12px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:9px}
+.logo-crop-grid canvas{max-width:100%;height:auto;max-height:210px;object-fit:contain;border-radius:9px}
+.logo-crop-grid figcaption{font:900 13px/1.4 var(--ch-font-body);text-align:center}
+@media(max-width:750px){.logo-crop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.logo-crop-grid{grid-template-columns:1fr}}
+</style>
+<style id="css-adicoes-v2">
+/* Adições v2: propostas para interface, não alteram iconografia oficial do painel */
+.v2-icons-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.v2-icon-card{border:1px solid var(--ch-border);background:rgb(255 243 230 / 80%);padding:15px 5px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;border-radius:16px;text-align:center;min-width:0}
+.v2-icon-display{background:rgb(91 46 8 / 5%);border-radius:12px;width:54px;height:54px;display:grid;place-items:center;color:var(--ch-brown)}
+.v2-icon-display svg{width:27px;height:27px}
+.v2-icon-card b{font:800 12px/1.3 var(--ch-font-body);overflow-wrap:anywhere}
+.v2-icon-card small{font:600 10px/1.3 ui-monospace,monospace;opacity:.65}
+.v2-icon-svg{height:20px;width:20px;flex-shrink:0}
+.v2-badge{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:999px;padding:8px 13px;font:900 13px/1.2 var(--ch-font-body);border:1px solid transparent;white-space:nowrap;color:var(--ch-brown)}
+.v2-badge svg{height:17px;width:17px;flex-shrink:0}
+.v2-badge[hidden]{display:none!important}
+.v2-badge--organic{background:var(--ch-green);border-color:rgb(91 46 8 / 32%)}
+.v2-badge--organic-outline{background:var(--ch-cream);border-color:var(--ch-brown)}
+.v2-badge--season{background:var(--ch-yellow)}
+.v2-badge--local{background:rgb(91 46 8 / 8%);border-color:var(--ch-border)}
+.v2-badge--sale{background:var(--ch-yellow)}
+.v2-badge--scarce{background:var(--ch-brown);color:var(--ch-cream)}
+.v2-badge--partner{background:var(--ch-cream);border:1px solid var(--ch-brown)}
+.v2-badge--sm{padding:5px 9px;font-size:11px;gap:5px}.v2-badge--sm svg{width:13px;height:13px}
+.v2-badge--lg{padding:12px 17px;font-size:16px}.v2-badge--lg svg{width:21px;height:21px}
+.v2-badge-rows{display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin:14px 0 20px}
+.v2-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.v2-product{border-radius:20px;border:1px solid var(--ch-border);overflow:hidden;background:var(--ch-cream)}
+.v2-product-image{height:170px;background:repeating-linear-gradient(120deg,rgba(91,46,8,.05) 0px,rgba(91,46,8,.05) 9px,rgba(91,46,8,.02) 9px,rgba(91,46,8,.02) 17px);padding:12px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:5px}
+.v2-photo-caption{align-self:flex-end;font-size:12px;text-align:center;width:100%;color:var(--ch-brown);opacity:.6;font-weight:800;padding-bottom:27px}
+.v2-product-content{padding:16px}
+.v2-product-content h3{font:700 20px/1.2 var(--ch-font-title);margin:5px 0 4px}
+.v2-product-content .v2-desc{font-size:12px;opacity:.7;min-height:18px}
+.v2-product-content .v2-price{font:900 22px/1.2 var(--ch-font-body);margin-top:11px}
+.v2-product-actions{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:10px}
+.v2-product-actions .ch-btn{padding:10px 12px;font-size:13px;min-height:44px}
+.v2-chip-select{display:flex;flex-wrap:wrap;gap:8px}
+.v2-note{padding:14px 17px;border-left:4px solid var(--ch-orange);background:rgba(91,46,8,.04);border-radius:0 12px 12px 0;font:700 14px/1.5 var(--ch-font-body)}
+.v2-matrix{width:100%;border-collapse:collapse;font-size:13px}
+.v2-matrix td,.v2-matrix th{padding:9px;border-bottom:1px solid var(--ch-border);text-align:left}
+.v2-demo-border{background:var(--ch-cream);border:1px solid var(--ch-border);border-radius:16px;padding:15px}
+.v2-demo-button{border:1px solid var(--ch-border);border-radius:10px;padding:7px 12px;background:var(--ch-cream);font:800 13px var(--ch-font-body);color:var(--ch-brown);cursor:pointer}
+.v2-demo-button[aria-pressed=true]{background:var(--ch-brown);color:var(--ch-cream)}
+@media(max-width:900px){.v2-icons-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.v2-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.v2-icons-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.v2-card-grid{grid-template-columns:1fr}.v2-icon-card{padding:12px 3px}}
+</style>
+</head>
+<body>
+  <div class="banner"><div class="shell"><span><span class="dot"></span>COLHEITA HORTIFRUTI · SISTEMA DE DESIGN</span><span class="mark">MARCA APROVADA · SEM ALTERAÇÕES</span></div></div>
+  <header class="hero"><div class="shell hero-grid">
+    <div>
+      <div class="eyebrow">Manual visual e biblioteca de interface · v2.0</div>
+      <h1>Identidade preservada.<br/>Sistema preparado.</h1>
+      <p class="lead">Uma base técnica para levar a Colheita Hortifruti do painel oficial às telas e aplicações, sem refazer a marca.</p>
+      <span class="pill">Fonte oficial: painel aprovado em 21/11/2026</span>
+    </div>
+    <aside class="hero-panel" aria-label="Resumo da fundação"><div class="hero-panel-head"><strong>DNA visual</strong><span class="status">Oficial</span></div>
+      <div class="mini-pal"><span style="background:#5B2E08"></span><span style="background:#E85D2A"></span><span style="background:#F6A623"></span><span style="background:#68BF2A"></span><span style="background:#FFF3E6"></span></div>
+      <div class="mini-list"><div><b>Paleta</b><span>5 cores exatas</span></div><div><b>Títulos</b><span>Baloo 2</span></div><div><b>Textos</b><span>Nunito</span></div><div><b>Elementos</b><span>Originais do painel</span></div></div>
+    </aside>
+  </div></header>
+  <nav class="bar" aria-label="Seções do manual"><div class="shell nav"><a href="#referencia">Referência</a><a href="#cores">Cores</a><a href="#tipografia">Tipografia</a><a href="#regras">Regras técnicas</a><a href="#componentes">Componentes</a><a href="#icones-auxiliares">Ícones</a><a href="#selos">Selos</a><a href="#aplicacao-selos">Cards com selos</a><a href="#telas">Exemplo de tela</a><a href="#entrega">Entrega</a><a href="#personalidade">Personalidade</a></div></nav>
+  <main class="shell">
+    <section class="section" id="referencia">
+      <div class="sect-head"><div><h2>O painel é soberano.</h2><p>Aprovado sem qualquer alteração. Não reconstruímos o logotipo, o monograma, os ícones nem os padrões. A imagem original é a única matriz visual vinculante. O painel original é carregado automaticamente a partir do repositório, sem alterar a arte aprovada.</p></div><span class="number">01 · MARCA</span></div>
+      <div class="two">
+        <div class="panel"><h3>Referência original</h3><div class="original" id="originalFrame"><p><strong>Visualize a marca exatamente como aprovada.</strong><br/>A imagem oficial será exibida automaticamente quando este site for aberto pelo repositório. Também é possível selecionar um arquivo local se necessário.</p></div><div class="upload"><label for="uploadOriginal" class="ch-btn ch-btn--outline" style="cursor:pointer">Abrir painel original</label><input class="visually-hidden" id="uploadOriginal" type="file" accept="image/png,image/jpeg,image/webp" /><button class="ch-btn ch-btn--quiet" type="button" id="clearOriginal" hidden>Remover da prévia</button><button class="ch-btn" type="button" id="saveWithLogos" hidden>Salvar prévia com logos</button></div><p class="smallnote" style="margin-top:12px">Referência oficial: ../assets/brand/painel-identidade-aprovado.jpg. O arquivo é uma cópia sem alterações dos pixels enviados. Os recortes aqui servem apenas para visualização, não para impressão em grande formato.</p></div>
+        <div class="panel"><h3>Componentes gráficos aprovados</h3><div class="rules"><div class="rule">Assinatura completa e suas variações conforme painel</div><div class="rule">Monograma com a composição integral apresentada</div><div class="rule">Ícones: Produtos, Pedidos, Retirada, Promoções, Favoritos, Conta</div><div class="rule">Padrões de folhas, campos e paisagem com sol</div><div class="rule warning">Nenhum desses desenhos foi substituído por versões genéricas.</div></div></div>
+
+        <div class="panel" id="logoCropsPanel" hidden style="grid-column:1 / -1">
+          <h3>Logotipos e monograma diretamente do painel</h3>
+          <p class="smallnote" style="margin-bottom:18px">Recortes de visualização feitos exclusivamente a partir do PNG original selecionado, sem redesenho nem recoloração. O fundo do painel é mantido. Não são arquivos vetoriais ou logos isolados prontos para produção.</p>
+          <div class="logo-crop-grid">
+            <figure><canvas data-crop="logo-principal" aria-label="Logo principal, recortada do painel original"></canvas><figcaption>Logo principal aprovada</figcaption></figure>
+            <figure><canvas data-crop="logo-horizontal" aria-label="Logo horizontal, recortada do painel original"></canvas><figcaption>Variação horizontal aprovada</figcaption></figure>
+            <figure><canvas data-crop="monograma-claro" aria-label="Monograma claro, recortado do painel original"></canvas><figcaption>Monograma claro</figcaption></figure>
+            <figure><canvas data-crop="monograma-escuro" aria-label="Monograma escuro, recortado do painel original"></canvas><figcaption>Monograma escuro</figcaption></figure>
+            <figure><canvas data-crop="icone-escuro" aria-label="Ícone escuro, recortado do painel original"></canvas><figcaption>Ícone, fundo marrom</figcaption></figure>
+            <figure><canvas data-crop="icone-claro" aria-label="Ícone claro, recortado do painel original"></canvas><figcaption>Ícone, fundo creme</figcaption></figure>
+          </div>
+          <p class="smallnote" id="cropNote" style="margin-top:14px"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cores">
+      <div class="sect-head"><div><h2>Cinco cores. Uma única marca.</h2><p>Os códigos hexadecimais abaixo foram transcritos do painel. Aplicações de interface à direita são recomendações técnicas.</p></div><span class="number">02 · CORES</span></div>
+      <div class="five">
+        <div class="swatch"><div class="swatch-color" style="background:#5B2E08"></div><div class="swatch-data"><strong>Marrom</strong><span class="mono">#5B2E08</span><span class="smallnote">Identidade, texto, ações principais.</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#E85D2A"></div><div class="swatch-data"><strong>Laranja</strong><span class="mono">#E85D2A</span><span class="smallnote">Acento e comunicação promocional.</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#F6A623"></div><div class="swatch-data"><strong>Amarelo</strong><span class="mono">#F6A623</span><span class="smallnote">Destaques com texto marrom.</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#68BF2A"></div><div class="swatch-data"><strong>Verde</strong><span class="mono">#68BF2A</span><span class="smallnote">Frescor, progresso, sinalização.</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#FFF3E6"></div><div class="swatch-data"><strong>Creme</strong><span class="mono">#FFF3E6</span><span class="smallnote">Base de superfícies e áreas claras.</span></div></div>
+      </div>
+      <div class="two" style="margin-top:20px">
+        <div class="panel"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center"><h3>Combinações testadas</h3><span class="status neutral">Acessibilidade</span></div><table class="contrast-table"><thead><tr><th>Texto / Fundo</th><th>Contraste</th><th>Texto normal</th></tr></thead><tbody>
+          <tr><td>Marrom / Creme</td><td>10,45:1</td><td class="yes">Atende</td></tr><tr><td>Creme / Marrom</td><td>10,45:1</td><td class="yes">Atende</td></tr><tr><td>Marrom / Amarelo</td><td>5,65:1</td><td class="yes">Atende</td></tr><tr><td>Marrom / Verde</td><td>4,93:1</td><td class="yes">Atende</td></tr><tr><td>Laranja / Creme</td><td>3,19:1</td><td class="no">Não atende</td></tr><tr><td>Verde / Creme</td><td>2,12:1</td><td class="no">Não atende</td></tr>
+        </tbody></table><p class="smallnote" style="margin-top:13px">Critério WCAG AA de 4,5:1 para texto normal; valores aproximados calculados para cores opacas.</p></div>
+        <div class="panel"><h3>Papéis propostos</h3><div class="rules"><div class="rule">Primário: fundo marrom com conteúdo creme</div><div class="rule">Superfície: creme, texto marrom</div><div class="rule">Chips: marrom selecionado, creme como texto</div><div class="rule">Destaque: amarelo e verde com texto marrom</div><div class="rule warning">Laranja não deve ser usado como texto pequeno sobre creme.</div></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="tipografia">
+      <div class="sect-head"><div><h2>Duas famílias, papéis claros.</h2><p>O nome das fontes é oficial. A escala de tamanhos abaixo foi organizada para implementação, sem modificar as fontes.</p></div><span class="number">03 · TIPO</span></div>
+      <div class="two"><div class="panel"><h3>Baloo 2 · títulos</h3><div class="type-sample"><span class="tag">H1 · 36 / 42 px</span><div style="font:700 36px/1.17 var(--ch-font-title)">Frescor da nossa terra</div></div><div class="type-sample"><span class="tag">H2 · 28 / 34 px</span><div style="font:700 28px/1.2 var(--ch-font-title)">Produtos da estação</div></div><div class="type-sample"><span class="tag">H3 · 22 / 28 px</span><div style="font:700 22px/1.27 var(--ch-font-title)">Escolha seus favoritos</div></div></div>
+      <div class="panel"><h3>Nunito · leitura e interface</h3><div class="type-sample"><span class="tag">Corpo · 16 / 24 px</span><div style="font:500 16px/1.5 var(--ch-font-body)">Encontre frutas, legumes e verduras. Consulte os detalhes antes de adicionar cada item ao pedido.</div></div><div class="type-sample"><span class="tag">Texto compacto · 14 / 20 px</span><div style="font:600 14px/1.42 var(--ch-font-body)">Descrição, unidade de venda e observações do produto.</div></div><div class="type-sample"><span class="tag">Botão · 16 / 20 px</span><div style="font:800 16px/1.25 var(--ch-font-body)">Adicionar ao pedido</div></div><div class="type-sample"><span class="tag">Legenda · 12 / 18 px</span><div style="font:700 12px/1.5 var(--ch-font-body)">Usar para informações secundárias não essenciais.</div></div></div></div>
+    </section>
+
+    <section class="section" id="regras"><div class="sect-head"><div><h2>Consistência em cada pixel.</h2><p>Medidas e comportamentos técnicos propostos para interfaces móveis, responsivas e acessíveis.</p></div><span class="number">04 · FUNDAÇÕES</span></div>
+      <div class="two"><div class="panel"><h3>Escala de espaço · múltiplos de 4px</h3><div class="scale" id="spaceChart"></div><p class="smallnote" style="margin-top:14px">Paddings mais frequentes: 12, 16 e 24px. Botões: alvo mínimo 44px, recomendado 48px.</p></div><div class="panel"><h3>Cantos e superfícies</h3><div class="radii"><div class="r" style="border-radius:8px">8px</div><div class="r" style="border-radius:12px">12px</div><div class="r" style="border-radius:18px">18px</div><div class="r" style="border-radius:24px">24px</div></div><p class="smallnote" style="margin-top:17px">Raios e transparências são recursos técnicos propostos, não alterações da paleta.</p></div></div>
+    </section>
+
+    <section class="section" id="componentes"><div class="sect-head"><div><h2>Biblioteca inicial de componentes.</h2><p>Exemplos funcionais de cores, tipografia, medidas e estados, ainda sujeitos à validação de interface. Não constituem telas finais do aplicativo.</p></div><span class="number">05 · COMPONENTES</span></div>
+      <div class="two"><div class="panel"><div class="componentgroup"><h4>Botões</h4><div class="components"><button class="ch-btn" type="button">Confirmar pedido</button><button class="ch-btn ch-btn--outline" type="button">Ver detalhes</button><button class="ch-btn ch-btn--quiet" type="button">Voltar</button><button class="ch-btn" disabled>Indisponível</button></div></div><div class="componentgroup"><h4>Campos</h4><div class="fieldgroup"><label class="ch-label" for="query">Buscar produto</label><input class="ch-input" id="query" placeholder="Ex.: tomate, banana, alface" /><div class="ch-help">Rótulo sempre visível, mesmo com placeholder.</div></div></div></div>
+      <div class="panel"><div class="componentgroup"><h4>Chips de seleção</h4><div class="chiprow" id="chips"><button class="ch-chip" aria-pressed="true">Todos</button><button class="ch-chip" aria-pressed="false">Frutas</button><button class="ch-chip" aria-pressed="false">Legumes</button><button class="ch-chip" aria-pressed="false">Verduras</button></div><p class="smallnote" style="margin-top:9px">Selecione os filtros para testar seu estado visual.</p></div><div class="componentgroup"><h4>Etiquetas</h4><div class="components"><span class="ch-tag">DA ESTAÇÃO</span><span class="ch-tag ch-tag--green">DISPONÍVEL</span><span class="pill">VALOR DEMONSTRATIVO</span></div></div><div class="componentgroup"><h4>Informação promocional</h4><div class="promobox"><div><b>Produtos da estação</b><p style="font-size:13px">Exemplo de card, sem oferta real.</p></div><span style="font-family:var(--ch-font-title);font-size:32px;font-weight:700">★</span></div></div></div></div>
+    </section>
+
+
+<section class="section" id="icones-auxiliares"><div class="sect-head"><div><h2>Ícones auxiliares do aplicativo.</h2><p>24 vetores editáveis, seguindo a paleta e o traço linear arredondado do painel. São uma <strong>proposta v2 para funções complementares</strong>, não substituem os seis ícones oficiais de Produtos, Pedidos, Retirada, Promoções, Favoritos e Conta.</p></div><span class="number">06 · ÍCONES v2</span></div>
+<div class="v2-icons-grid"><div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Busca"><title>Busca</title><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></div><b>Busca</b><small>busca.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Filtrar"><title>Filtrar</title><path d="M4 6h16M7 12h10M10 18h4"/><circle cx="7" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r="1" fill="currentColor" stroke="none"/></svg></div><b>Filtrar</b><small>filtro.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Carrinho"><title>Carrinho</title><path d="M2.5 4.5h2.6l2.3 11.3h12.1l2-8.3H6.3"/><circle cx="9.4" cy="20.2" r="1.2"/><circle cx="18" cy="20.2" r="1.2"/></svg></div><b>Carrinho</b><small>carrinho.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Adicionar"><title>Adicionar</title><path d="M12 4v16M4 12h16"/></svg></div><b>Adicionar</b><small>adicionar.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Remover"><title>Remover</title><path d="M4 12h16"/></svg></div><b>Remover</b><small>remover.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Menu"><title>Menu</title><path d="M4 6h16M4 12h16M4 18h16"/></svg></div><b>Menu</b><small>menu.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Voltar"><title>Voltar</title><path d="m12 19-7-7 7-7M5 12h15"/></svg></div><b>Voltar</b><small>voltar.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Avançar"><title>Avançar</title><path d="m9 5 7 7-7 7"/></svg></div><b>Avançar</b><small>avancar.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Localização"><title>Localização</title><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><b>Localização</b><small>localizacao.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Entrega"><title>Entrega</title><path d="M3 6h11v11H3zM14 10h4l3 4v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><b>Entrega</b><small>entrega.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Notificação"><title>Notificação</title><path d="M18 9a6 6 0 0 0-12 0c0 6-2 6-2 8h16c0-2-2-2-2-8ZM10 21h4"/></svg></div><b>Notificação</b><small>notificacao.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mensagem"><title>Mensagem</title><path d="M20 11a8 8 0 0 1-8 8 9 9 0 0 1-3-.6L4 20l1.7-4.7a8 8 0 1 1 14.3-4.3Z"/></svg></div><b>Mensagem</b><small>mensagem.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Avaliação"><title>Avaliação</title><path d="m12 2.5 2.9 6 6.6.9-4.8 4.7 1.1 6.6-5.8-3.1-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9z"/></svg></div><b>Avaliação</b><small>estrela.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Cupom"><title>Cupom</title><path d="M3 7h18v4a2.5 2.5 0 0 0 0 5v3H3v-3a2.5 2.5 0 0 0 0-5V7Z"/><path d="M12 7v2M12 12v2M12 17v2"/></svg></div><b>Cupom</b><small>cupom.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Compartilhar"><title>Compartilhar</title><circle cx="18" cy="5" r="2"/><circle cx="6" cy="12" r="2"/><circle cx="18" cy="19" r="2"/><path d="m8 11 8-5M8 13l8 5"/></svg></div><b>Compartilhar</b><small>compartilhar.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Ajuda"><title>Ajuda</title><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 4.2 1.8c-1.1 1-1.7 1.3-1.7 3.2M12 17.7h.01"/></svg></div><b>Ajuda</b><small>ajuda.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Verificado"><title>Verificado</title><circle cx="12" cy="12" r="9"/><path d="m7.5 12 3 3 6-6"/></svg></div><b>Verificado</b><small>verificado.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Horário"><title>Horário</title><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><b>Horário</b><small>relogio.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg></div><b>Folha</b><small>folha.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Embalagem"><title>Embalagem</title><path d="m3 8 9-4 9 4v10l-9 4-9-4V8ZM3 8l9 4 9-4M12 12v10"/></svg></div><b>Embalagem</b><small>embalagem.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Calendário"><title>Calendário</title><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M9 15h2M14 15h2"/></svg></div><b>Calendário</b><small>calendario.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Excluir"><title>Excluir</title><path d="M4 6h16M9 6V4h6v2M6 6l1 15h10l1-15M10 10v7M14 10v7"/></svg></div><b>Excluir</b><small>excluir.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Informações"><title>Informações</title><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7h.01"/></svg></div><b>Informações</b><small>informacoes.svg</small></div>
+<div class="v2-icon-card"><div class="v2-icon-display"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Fechar"><title>Fechar</title><path d="M5 5l14 14M19 5 5 19"/></svg></div><b>Fechar</b><small>fechar.svg</small></div></div>
+<div class="two" style="margin-top:22px"><div class="panel"><h3>Regras de uso</h3><div class="rules"><div class="rule">Prancheta 24 × 24 px; traço de 1,8 px com pontas e junções arredondadas.</div><div class="rule">Escalas: 20 px compacto, 24 px padrão e 28–32 px destaque.</div><div class="rule">Marrom oficial sobre creme; versão creme sobre marrom em botões.</div><div class="rule">Toda ação exclusivamente com ícone recebe um nome acessível.</div></div></div><div class="panel"><h3>Limites de identidade</h3><div class="rules"><div class="rule warning">Os seis ícones desenhados no painel continuam sendo os únicos oficiais dessas categorias.</div><div class="rule warning">Este conjunto complementar precisa de validação visual antes do GitHub.</div><div class="rule">Arquivos separados em <code>icones-auxiliares/*.svg</code> para importação.</div></div></div></div>
+</section>
+<section class="section" id="selos"><div class="sect-head"><div><h2>Etiquetas de produto.</h2><p>Uma família de selos informativos dentro da paleta oficial. O destaque principal é a etiqueta “Orgânico” em verde, com folha linear e texto marrom. Não é o selo governamental de certificação.</p></div><span class="number">07 · ETIQUETAS v2</span></div>
+<div class="two"><div class="panel"><h3>Etiqueta “Orgânico”</h3><div class="v2-badge-rows"><span class="v2-badge v2-badge--organic v2-badge--lg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg> ORGÂNICO</span><span class="v2-badge v2-badge--organic"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg> ORGÂNICO</span><span class="v2-badge v2-badge--organic v2-badge--sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg> ORGÂNICO</span></div><p class="smallnote">Tamanhos propostos: grande para destaque, normal para detalhe, compacto para cartão. SVGs independentes disponíveis no pacote.</p><hr style="border:0;border-top:1px solid var(--ch-border);margin:20px 0"/><h3>Versão contornada</h3><div class="v2-badge-rows"><span class="v2-badge v2-badge--organic-outline"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg> ORGÂNICO</span></div><p class="smallnote">Para superfícies próximas ao verde; sem introduzir cores fora do painel.</p></div>
+<div class="panel"><h3>Família complementar</h3><div class="v2-badge-rows"><span class="v2-badge v2-badge--season"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Horário"><title>Horário</title><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> DA ESTAÇÃO</span><span class="v2-badge v2-badge--local"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Localização"><title>Localização</title><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> PRODUÇÃO LOCAL</span><span class="v2-badge v2-badge--sale"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Cupom"><title>Cupom</title><path d="M3 7h18v4a2.5 2.5 0 0 0 0 5v3H3v-3a2.5 2.5 0 0 0 0-5V7Z"/><path d="M12 7v2M12 12v2M12 17v2"/></svg> OFERTA</span><span class="v2-badge v2-badge--scarce"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Embalagem"><title>Embalagem</title><path d="m3 8 9-4 9 4v10l-9 4-9-4V8ZM3 8l9 4 9-4M12 12v10"/></svg> ÚLTIMAS UNIDADES</span><span class="v2-badge v2-badge--partner"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Verificado"><title>Verificado</title><circle cx="12" cy="12" r="9"/><path d="m7.5 12 3 3 6-6"/></svg> PRODUTOR PARCEIRO</span></div><p class="smallnote">Esses rótulos só são exibidos com origem, sazonalidade, estoque e ofertas verificados.</p></div></div>
+<div class="v2-note" style="margin-top:18px"><strong>Obrigatório antes da publicação:</strong> a etiqueta de interface “Orgânico” não é prova de certificação e não substitui o selo oficial SisOrg. Aplicá-la somente a produtos cuja condição orgânica esteja documentalmente verificada, de acordo com o mecanismo legal aplicável. Não usar uma folha verde como atalho para afirmar organicidade.</div>
+</section>
+<section class="section" id="aplicacao-selos"><div class="sect-head"><div><h2>Como as etiquetas entram nos produtos.</h2><p>Três situações de catálogo para demonstrar hierarquia. Os nomes e categorias são cenários ilustrativos, não descrições de estoque real. A primeira etiqueta só pode ser usada quando o produto tiver qualificação comprovada.</p></div><span class="number">08 · EXEMPLOS v2</span></div>
+<div class="v2-card-grid">
+<article class="v2-product"><div class="v2-product-image"><span class="v2-badge v2-badge--organic v2-badge--sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg> ORGÂNICO</span><span class="v2-photo-caption">ÁREA PARA FOTO REAL DO PRODUTO</span></div><div class="v2-product-content"><h3>Alface</h3><p class="v2-desc">Exemplo: unidade · condição orgânica validada</p><p class="v2-price">R$ —</p><div class="v2-product-actions"><span class="smallnote">Preço fictício não informado</span><button class="ch-btn" type="button" data-demo-add="alface" aria-label="Adicionar alface na demonstração"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#FFF3E6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Adicionar"><title>Adicionar</title><path d="M12 4v16M4 12h16"/></svg> Adicionar</button></div></div></article>
+<article class="v2-product"><div class="v2-product-image"><span class="v2-badge v2-badge--season v2-badge--sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Horário"><title>Horário</title><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg> DA ESTAÇÃO</span><span class="v2-photo-caption">ÁREA PARA FOTO REAL DO PRODUTO</span></div><div class="v2-product-content"><h3>Manga</h3><p class="v2-desc">Exemplo: kg · sazonalidade confirmada</p><p class="v2-price">R$ —</p><div class="v2-product-actions"><span class="smallnote">Atributo condicional</span><button class="ch-btn" type="button" data-demo-add="manga" aria-label="Adicionar manga na demonstração"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#FFF3E6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Adicionar"><title>Adicionar</title><path d="M12 4v16M4 12h16"/></svg> Adicionar</button></div></div></article>
+<article class="v2-product"><div class="v2-product-image"><span class="v2-badge v2-badge--sale v2-badge--sm"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Cupom"><title>Cupom</title><path d="M3 7h18v4a2.5 2.5 0 0 0 0 5v3H3v-3a2.5 2.5 0 0 0 0-5V7Z"/><path d="M12 7v2M12 12v2M12 17v2"/></svg> OFERTA</span><span class="v2-photo-caption">ÁREA PARA FOTO REAL DO PRODUTO</span></div><div class="v2-product-content"><h3>Cenoura</h3><p class="v2-desc">Exemplo: kg · desconto real exigido</p><p class="v2-price">R$ —</p><div class="v2-product-actions"><span class="smallnote">Atributo condicional</span><button class="ch-btn" type="button" data-demo-add="cenoura" aria-label="Adicionar cenoura na demonstração"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#FFF3E6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Adicionar"><title>Adicionar</title><path d="M12 4v16M4 12h16"/></svg> Adicionar</button></div></div></article>
+</div>
+<div class="two" style="margin-top:20px"><div class="panel"><h3>Prioridade de exibição</h3><div class="rules"><div class="rule">No card: no máximo duas etiquetas principais.</div><div class="rule">“Orgânico” tem prioridade sobre selos promocionais, quando comprovado.</div><div class="rule">“Oferta” não deve esconder preço nem unidade.</div><div class="rule">Detalhe de produto pode exibir todos os atributos verdadeiros.</div></div></div><div class="panel"><h3>Interação da demonstração</h3><p class="smallnote">Os botões a seguir mostram apenas a mudança visual da ação. Não adicionam produtos a um carrinho real.</p><div class="v2-demo-border" style="margin-top:12px"><div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><button type="button" class="v2-demo-button" id="demoOrganicToggle" aria-pressed="true">Mostrar etiqueta</button><span class="v2-badge v2-badge--organic" id="demoOrganicBadge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" color="#5B2E08" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Folha"><title>Folha</title><path d="M20 4C11 4 5 7 5 14a6 6 0 0 0 6 6c7 0 9-9 9-16ZM4 20c5-7 8-9 12-11"/></svg> ORGÂNICO</span></div><p class="smallnote" style="margin-top:13px" id="demoStatus" role="status">Exemplo visual. Não confirma a certificação de nenhum produto.</p></div></div></div>
+</section>
+
+    <section class="section" id="telas"><div class="sect-head"><div><h2>Primeira aplicação em tela.</h2><p>Demonstração de estrutura para o catálogo. Imagens e valores são placeholders. Nenhum logotipo ou pictograma oficial foi recriado. A v2 inclui ícones auxiliares distintos da iconografia oficial.</p></div><span class="number">09 · PROTÓTIPO</span></div>
+      <div class="two"><div class="phonewrap"><div class="phone"><div class="phonehead"><div class="phonestatus"><span>PRÉVIA DE COMPONENTES</span><span>DEMO</span></div><p class="smallnote">Interface de referência (não é a logo)</p><h3>Produtos</h3><div class="search">Buscar frutas, legumes, verduras...</div></div><div class="products"><div class="prod"><div class="prodimg">FOTOGRAFIA<br/>DO PRODUTO</div><div class="prodbody"><b>Tomate</b><small>unidade ilustrativa</small><div class="prodfoot"><strong>R$ --</strong><button class="roundbtn" type="button" title="Adicionar item demonstrativo" aria-label="Adicionar tomate">+</button></div></div></div><div class="prod"><div class="prodimg">FOTOGRAFIA<br/>DO PRODUTO</div><div class="prodbody"><b>Banana</b><small>unidade ilustrativa</small><div class="prodfoot"><strong>R$ --</strong><button class="roundbtn" type="button" title="Adicionar item demonstrativo" aria-label="Adicionar banana">+</button></div></div></div></div><div class="phonenav"><span>Produtos</span><span>Pedidos</span><span>Favoritos</span><span>Conta</span></div></div></div>
+      <div class="panel"><h3>Decisões demonstradas</h3><div class="rules"><div class="rule">Texto principal e ações em marrom oficial.</div><div class="rule">Fundo creme, sem novas cores visuais de marca.</div><div class="rule">Baloo 2 nos títulos e Nunito nos controles.</div><div class="rule">Cartões com leitura rápida, unidade e preço.</div><div class="rule">Ações adaptadas a toque.</div><div class="rule warning">Quatro abas são um exemplo de navegação, não aprovação de arquitetura. Os seis ícones do painel permanecem válidos.</div></div><p class="smallnote" style="margin-top:18px">Esta tela demonstra a aparência de componentes, sem integrar estoque, preços reais nem pedidos. Os botões “+” são apenas visuais.</p></div></div>
+    </section>
+
+    <section class="section" id="entrega"><div class="sect-head"><div><h2>Pronto para evoluir, sem mexer na marca.</h2><p>Base técnica construída e biblioteca complementar adicionada. A identidade original permanece inalterada; os novos ícones e etiquetas são propostas até a revisão final.</p></div><span class="number">10 · GOVERNANÇA</span></div>
+      <div class="two"><div class="panel"><h3>Disponível no pacote ZIP</h3><div class="tokens"><div class="token"><b>tokens.json</b><code>cores · tipos · espaços · raios</code></div><div class="token"><b>tokens.css</b><code>custom properties CSS</code></div><div class="token"><b>componentes.css</b><code>botão · campos · chips · cartões</code></div><div class="token"><b>MANUAL.md</b><code>regras · contrastes · pendências</code></div><div class="token"><b>icones-auxiliares/</b><code>24 SVGs propostos</code></div><div class="token"><b>etiquetas/</b><code>3 SVGs “Orgânico”</code></div></div></div><div class="panel"><h3>Pendências honestas</h3><div class="rules"><div class="rule warning">Não há SVG vetorial oficial extraível com garantia de fidelidade.</div><div class="rule warning">Esta prévia não substitui o arquivo de arte original aprovado.</div><div class="rule">Revisar escala e componentes em testes com o aplicativo real.</div><div class="rule">Só exportar os seis ícones oficiais/marca isolados após conferência visual da composição original. Os 24 SVGs desta versão são auxiliares novos.</div></div></div></div>
+    </section>
+  
+<section class="section" id="personalidade">
+  <div class="sect-head"><div><h2>O jeito Colheita de conversar</h2><p>Personalidade e manifesto são <strong>propostas para sua aprovação</strong>. A identidade visual continua exatamente a do painel.</p></div><span class="number">10 · VOZ</span></div>
+  <div class="two">
+    <div class="panel"><h3>Personalidade proposta</h3><p>Fresca e natural, próxima, confiável, prática e alegre sem exageros.</p><div class="rules"><div class="rule">Falar de forma clara, acolhedora e sem exagerar nas promessas.</div><div class="rule">Dar informação útil: unidade, disponibilidade, origem e certificação quando comprovadas.</div><div class="rule">Evitar que “orgânico” ou “local” pareçam atributos de todos os produtos.</div></div></div>
+    <div class="panel"><h3>Manifesto proposto</h3><p>Todo dia começa com escolhas pequenas. O que vai para a mesa, o que cabe na rotina, o que vale a pena levar para casa.</p><p>Acreditamos que escolher bem não deveria ser complicado. Que frescor tem a ver com cuidado, informação e confiança.</p><p>A Colheita existe para aproximar você do hortifruti do dia a dia, com variedade, clareza e praticidade.</p></div>
+    <div class="panel" style="grid-column:1 / -1"><h3>Propostas de slogan</h3><div class="rules"><div class="rule"><strong>O bom da feira no seu dia.</strong> (recomendação inicial)</div><div class="rule">Frescor para a vida de todo dia.</div><div class="rule">Seu hortifruti, mais perto.</div><div class="rule">Mais sabor para a rotina.</div><div class="rule">Escolhas frescas, dias leves.</div></div><p class="smallnote" style="margin-top:12px">Nenhum slogan foi aprovado ainda. <a href="../docs/MANIFESTO_E_SLOGANS.md">Leia o manifesto completo</a> ou <a href="home.html">abra a home demonstrativa</a>.</p></div>
+  </div>
+</section>
+</main>
+  <footer class="foot"><div class="shell foot-inner"><div><strong style="font-family:var(--ch-font-title);font-size:28px">Colheita Hortifruti</strong><div style="font-weight:800;font-size:13px">Design System · 2.0</div></div><small>Manual técnico associado ao painel de identidade visual aprovado. Nome em texto neste rodapé, não um novo desenho de logotipo. Nada da marca original foi redesenhado.</small></div></footer>
+<script>
+  const chart=document.getElementById('spaceChart');
+  [4,8,12,16,20,24,32,40,48,64].forEach(x=>{const item=document.createElement('div');item.className='item';const bar=document.createElement('div');bar.className='barspace';bar.style.height=(x+14)+'px';bar.style.width='36px';const label=document.createElement('b');label.textContent=x;item.append(bar,label);chart.append(item)});
+  document.querySelectorAll('#chips button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#chips button').forEach(x=>x.setAttribute('aria-pressed',String(x===btn)));}));
+  const fileInput=document.getElementById('uploadOriginal');const clear=document.getElementById('clearOriginal');const frame=document.getElementById('originalFrame');const fallback=frame.innerHTML;let objectUrl;
+  function clearImg(){if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=undefined;embeddedOriginalDataUrl=null;frame.innerHTML=fallback;clear.hidden=true;cropPanel.hidden=true;saveWithLogos.hidden=true;fileInput.value=''}
+  // Coordenadas relativas extraídas do painel aprovado 1648x928; apenas recortes de visualização.
+  const cropRegions={
+    'logo-principal':[0.028,0.034,0.240,0.431],
+    'logo-horizontal':[0.286,0.095,0.246,0.147],
+    'monograma-claro':[0.552,0.255,0.099,0.181],
+    'monograma-escuro':[0.653,0.243,0.102,0.189],
+    'icone-escuro':[0.297,0.280,0.106,0.184],
+    'icone-claro':[0.414,0.282,0.106,0.183]
+  };
+  const cropPanel=document.getElementById('logoCropsPanel');
+  const saveWithLogos=document.getElementById('saveWithLogos');
+  let embeddedOriginalDataUrl=null;
+  function drawPanelCrops(img){
+    document.querySelectorAll('canvas[data-crop]').forEach(c=>{
+      const rect=cropRegions[c.dataset.crop];
+      const sx=Math.round(rect[0]*img.naturalWidth),sy=Math.round(rect[1]*img.naturalHeight);
+      const sw=Math.round(rect[2]*img.naturalWidth),sh=Math.round(rect[3]*img.naturalHeight);
+      c.width=sw;c.height=sh;
+      const ctx=c.getContext('2d');ctx.clearRect(0,0,sw,sh);
+      ctx.drawImage(img,sx,sy,sw,sh,0,0,sw,sh);
+    });
+    cropPanel.hidden=false;
+    document.getElementById('cropNote').textContent=`Painel carregado localmente (${img.naturalWidth} × ${img.naturalHeight} px). Recortes proporcionais, sem modificação dos pixels.`;
+  }
+  fileInput.addEventListener('change',()=>{
+    const file=fileInput.files?.[0];if(!file)return;
+    if(!file.type.startsWith('image/')){alert('Selecione uma imagem PNG, JPG ou WebP.');return;}
+    if(objectUrl)URL.revokeObjectURL(objectUrl);
+    objectUrl=URL.createObjectURL(file);
+    const img=document.createElement('img');
+    img.alt='Painel original de identidade visual selecionado localmente';
+    img.onload=()=>{frame.replaceChildren(img);drawPanelCrops(img);clear.hidden=false;};
+    const reader=new FileReader();
+    reader.onload=()=>{embeddedOriginalDataUrl=reader.result;saveWithLogos.hidden=false;};
+    reader.readAsDataURL(file);
+    img.onerror=()=>{alert('Não foi possível abrir esta imagem.');};
+    img.src=objectUrl;
+  });
+  clear.addEventListener('click',clearImg);
+  saveWithLogos.addEventListener('click',()=>{
+    if(!embeddedOriginalDataUrl)return;
+    const clone=document.documentElement.cloneNode(true);
+    const old=clone.querySelector('#embeddedPanelData');if(old)old.remove();
+    const inline=clone.ownerDocument.createElement('script');
+    inline.type='application/json';inline.id='embeddedPanelData';
+    inline.textContent=JSON.stringify(embeddedOriginalDataUrl);
+    clone.querySelector('body').appendChild(inline);
+    const blob=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html;charset=UTF-8'});
+    const href=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=href;a.download='Colheita_Design_System_COM_LOGOS.html';
+    document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(href),5000);
+  });
+  // Quando o arquivo foi salvo com o PNG incorporado, exibir a identidade automaticamente.
+  window.addEventListener('DOMContentLoaded',()=>{
+  const inlinePanel=document.getElementById('embeddedPanelData');
+  if(inlinePanel){
+    try{embeddedOriginalDataUrl=JSON.parse(inlinePanel.textContent);
+      const img=new Image();img.alt='Painel original incorporado ao arquivo';
+      img.onload=()=>{frame.replaceChildren(img);drawPanelCrops(img);clear.hidden=false;saveWithLogos.hidden=false;};
+      img.src=embeddedOriginalDataUrl;
+    }catch(e){console.warn('Não foi possível abrir o painel incorporado',e);}
+  } else {
+    const officialPanel=new Image();
+    officialPanel.alt='Painel oficial da Colheita Hortifruti, reproduzido sem alterações';
+    officialPanel.onload=()=>{
+      frame.replaceChildren(officialPanel);
+      drawPanelCrops(officialPanel);
+      clear.hidden=false;
+    };
+    officialPanel.onerror=()=>{console.warn('Referência de marca ausente. Use o seletor de arquivo para abrir o painel.');};
+    officialPanel.src='../assets/brand/painel-identidade-aprovado.jpg';
+  }
+  });
+</script>
+<script>
+  // Controles demonstrativos, sem backend ou mutação de dados reais.
+  document.querySelectorAll('[data-demo-add]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const name=btn.dataset.demoAdd;
+      const added=btn.getAttribute('data-added')==='true';
+      btn.dataset.added=String(!added);
+      btn.innerHTML=added?'Adicionar':'✓ Adicionado (demo)';
+      btn.setAttribute('aria-label',added?'Adicionar '+name+' na demonstração':name+' marcado na demonstração');
+    });
+  });
+  const t=document.getElementById('demoOrganicToggle'), b=document.getElementById('demoOrganicBadge');
+  if(t&&b)t.addEventListener('click',()=>{
+    const pressed=t.getAttribute('aria-pressed')==='true';
+    t.setAttribute('aria-pressed',String(!pressed));
+    b.hidden=pressed;
+    t.textContent=pressed?'Exibir etiqueta':'Ocultar etiqueta';
+  });
+</script>
+</body></html>

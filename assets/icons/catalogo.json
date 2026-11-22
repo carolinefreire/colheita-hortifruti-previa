@@ -1,0 +1,146 @@
+[
+  {
+    "id": "busca",
+    "nome": "Busca",
+    "arquivo": "auxiliares/busca.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "filtro",
+    "nome": "Filtrar",
+    "arquivo": "auxiliares/filtro.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "carrinho",
+    "nome": "Carrinho",
+    "arquivo": "auxiliares/carrinho.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "adicionar",
+    "nome": "Adicionar",
+    "arquivo": "auxiliares/adicionar.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "remover",
+    "nome": "Remover",
+    "arquivo": "auxiliares/remover.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "menu",
+    "nome": "Menu",
+    "arquivo": "auxiliares/menu.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "voltar",
+    "nome": "Voltar",
+    "arquivo": "auxiliares/voltar.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "avancar",
+    "nome": "Avançar",
+    "arquivo": "auxiliares/avancar.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "localizacao",
+    "nome": "Localização",
+    "arquivo": "auxiliares/localizacao.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "entrega",
+    "nome": "Entrega",
+    "arquivo": "auxiliares/entrega.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "notificacao",
+    "nome": "Notificação",
+    "arquivo": "auxiliares/notificacao.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "mensagem",
+    "nome": "Mensagem",
+    "arquivo": "auxiliares/mensagem.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "estrela",
+    "nome": "Avaliação",
+    "arquivo": "auxiliares/estrela.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "cupom",
+    "nome": "Cupom",
+    "arquivo": "auxiliares/cupom.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "compartilhar",
+    "nome": "Compartilhar",
+    "arquivo": "auxiliares/compartilhar.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "ajuda",
+    "nome": "Ajuda",
+    "arquivo": "auxiliares/ajuda.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "verificado",
+    "nome": "Verificado",
+    "arquivo": "auxiliares/verificado.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "relogio",
+    "nome": "Horário",
+    "arquivo": "auxiliares/relogio.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "folha",
+    "nome": "Folha",
+    "arquivo": "auxiliares/folha.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "embalagem",
+    "nome": "Embalagem",
+    "arquivo": "auxiliares/embalagem.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "calendario",
+    "nome": "Calendário",
+    "arquivo": "auxiliares/calendario.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "excluir",
+    "nome": "Excluir",
+    "arquivo": "auxiliares/excluir.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "informacoes",
+    "nome": "Informações",
+    "arquivo": "auxiliares/informacoes.svg",
+    "tipo": "proposta-v2"
+  },
+  {
+    "id": "fechar",
+    "nome": "Fechar",
+    "arquivo": "auxiliares/fechar.svg",
+    "tipo": "proposta-v2"
+  }
+]
