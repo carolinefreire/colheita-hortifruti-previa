@@ -10,7 +10,7 @@
         420
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 60,
+      "contornos": 48,
       "faixa_corrigida": null
     },
     {
@@ -22,7 +22,7 @@
         213
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 62,
+      "contornos": 47,
       "faixa_corrigida": null
     },
     {
@@ -34,7 +34,7 @@
         418
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 23,
+      "contornos": 19,
       "faixa_corrigida": true
     },
     {
@@ -46,7 +46,7 @@
         418
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 20,
+      "contornos": 19,
       "faixa_corrigida": null
     },
     {
@@ -58,7 +58,7 @@
         381
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 19,
+      "contornos": 17,
       "faixa_corrigida": null
     },
     {
@@ -70,7 +70,7 @@
         387
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 26,
+      "contornos": 24,
       "faixa_corrigida": null
     },
     {
@@ -154,7 +154,7 @@
         831
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 65,
+      "contornos": 58,
       "faixa_corrigida": null
     },
     {
@@ -166,7 +166,7 @@
         833
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 19,
+      "contornos": 14,
       "faixa_corrigida": null
     },
     {
@@ -178,7 +178,7 @@
         833
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 33,
+      "contornos": 24,
       "faixa_corrigida": null
     }
   ]
