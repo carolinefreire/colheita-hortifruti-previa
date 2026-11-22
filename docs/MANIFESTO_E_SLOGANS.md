@@ -12,7 +12,13 @@ A Colheita existe para aproximar você do hortifruti do dia a dia, com variedade
 
 Porque uma mesa cheia de vida começa com escolhas mais simples.
 
-## Slogans candidatos (não oficializados)
+## Slogan escolhido
+
+**Da horta pra sua porta.**
+
+A frase foi escolhida para uso no design system e nas peças de apresentação. O manifesto permanece em revisão.
+
+## Propostas anteriores (descartadas)
 
 1. **O bom da feira no seu dia.** (recomendação inicial; claro, memorável e amplo)
 2. **Frescor para a vida de todo dia.** (ênfase em rotina)
@@ -24,4 +30,4 @@ Porque uma mesa cheia de vida começa com escolhas mais simples.
 
 Evitar “tudo orgânico”, “direto do produtor”, “100% local” ou “sem agrotóxicos” como promessa geral, pois a operação também comercializa itens do CEASA e o status deve ser identificado por produto.
 
-**Decisão pendente:** escolher o slogan final e aprovar ou revisar o manifesto.
+**Decisão pendente:** revisar e aprovar o manifesto.
