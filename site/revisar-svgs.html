@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Revisão de SVGs · Colheita Hortifruti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--marrom:#5B2E08;--verde:#6B8F2A;--verde-lima:#A5AC2F;--amarelo:#F6A623;--laranja:#E85D2A;--creme:#FFF3E6;--borda:#E3CEB8;--superficie:#FFFDF9}
+*{box-sizing:border-box}body{margin:0;background:#FFF8F0;color:var(--marrom);font:15px/1.5 Nunito,Arial,sans-serif}a{color:inherit}button,textarea{font:inherit}
+.top{background:var(--creme);border-bottom:1px solid var(--borda);padding:18px 24px}.topin{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.top img{width:min(250px,100%);height:75px;object-fit:contain;object-position:left}
+.top a{font-weight:800;text-underline-offset:4px}main{max-width:1200px;padding:24px 16px 80px;margin:auto}
+h1,h2{font-family:'Baloo 2',Nunito,sans-serif;line-height:1.16}h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px}h2{font-size:25px;margin:30px 0 6px}p{margin:0 0 12px}.muted{color:#7B5945}
+.intro{padding:16px 0 14px}.progress{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:17px 0 6px}
+.stat{background:white;border:1px solid var(--borda);border-radius:12px;padding:8px 12px;font-size:13px}.stat strong{font-size:17px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.action{padding:11px 17px;min-height:44px;border-radius:12px;border:1px solid var(--marrom);background:var(--marrom);color:white;cursor:pointer;font-weight:800}.action.secondary{color:var(--marrom);background:transparent}
+.groupnote{color:#76513a;margin-bottom:16px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.tile{background:var(--superficie);border:1px solid var(--borda);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.tile h3{font-size:16px;margin:0;font-weight:900}.tile .caption{font-size:12px;color:#76513a}.tile .canvas{border:1px solid #F2E5D5;background:var(--creme);border-radius:14px;display:flex;align-items:center;justify-content:center;min-height:184px;padding:13px}
+.tile .canvas.dark{background:var(--marrom)}.tile .canvas img{width:100%;height:156px;object-fit:contain;display:block}
+.tile.nav .canvas img{max-width:136px;height:148px}.actual{display:flex;gap:10px;justify-content:center;align-items:center;font-size:11px;color:#76513a}
+.actual img{width:24px;height:24px;object-fit:contain}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}
+.vote{border:1.5px solid #B9A08A;border-radius:11px;padding:9px 6px;background:white;min-height:44px;font-weight:800;cursor:pointer;color:var(--marrom)}
+.vote[data-selected="true"][data-choice="aprovado"]{background:#E9F1DD;border-color:#6B8F2A}.vote[data-selected="true"][data-choice="desaprovado"]{background:#FCE8DF;border-color:#D46B4B}
+.vote:focus-visible,.action:focus-visible,textarea:focus-visible{outline:3px solid var(--amarelo);outline-offset:2px}
+.status{font-size:12px;font-weight:800;min-height:20px}.status[data-value="aprovado"]{color:#4C7223}.status[data-value="desaprovado"]{color:#AB462A}
+.reason{width:100%;min-height:50px;resize:vertical;border:1px solid var(--borda);border-radius:9px;padding:8px;background:white;color:var(--marrom)}
+.foot{border-top:1px solid var(--borda);margin-top:38px;padding-top:18px;color:#775440;font-size:13px}
+@media(max-width:550px){.top{padding:12px 16px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.tile{padding:10px;border-radius:14px}.tile .canvas{min-height:122px;padding:6px}.tile .canvas img{height:104px}.tile.nav .canvas img{height:100px}.tile h3{font-size:13px}.tile .caption{font-size:10px}.buttons{grid-template-columns:1fr;gap:5px}.vote{padding:5px;min-height:38px;font-size:12px}.reason{font-size:12px}.actual{font-size:10px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="topin"><img src="../assets/brand/aprovados/02_Logo_horizontal_v01.svg" alt="Colheita Hortifruti, logo horizontal oficial"><nav><a href="../index.html">Início</a> · <a href="design-system.html">Design system</a></nav></div></header>
+<main><section class="intro"><h1>Revisão dos SVGs 🌾</h1>
+<p>Confira cada arquivo e marque <strong>Aprovo</strong> ou <strong>Desaprovo</strong> abaixo dele. Os oito primeiros já foram aprovados anteriormente e continuam sem alterações; os cinco ícones de navegação estão em revisão após vetorização.</p>
+<p class="muted">As escolhas ficam registradas neste navegador. Para compartilhar ou arquivar as avaliações, use <strong>Exportar avaliação</strong>; esta página estática não envia votos automaticamente ao GitHub.</p>
+<div class="progress" aria-live="polite" id="progress"></div>
+<div class="toolbar"><button class="action" type="button" id="export">Exportar avaliação (JSON)</button><button class="action secondary" type="button" id="reset">Restaurar situação original</button></div></section>
+<section aria-labelledby="marcah"><h2 id="marcah">01 · Identidade oficial</h2><p class="groupnote">Oito SVGs já aprovados. Pode reconferir individualmente sem alterar o original.</p><div class="gallery" id="marca"></div></section>
+<section aria-labelledby="navh"><h2 id="navh">02 · Navegação do aplicativo</h2><p class="groupnote">Cinco ícones seguindo a composição visual aprovada. A linha “24 px” mostra o tamanho usado em navegação móvel.</p><div class="gallery" id="navegacao"></div></section>
+<footer class="foot">Colheita Hortifruti · Revisão visual de ativos · Decisões guardadas apenas neste dispositivo/navegador · Nenhuma aprovação altera arquivos automaticamente</footer></main>
+<script>
+const DATA=[{"id":"01","name":"Logo principal v03","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/01_Logo_principal_v03.svg"},{"id":"02","name":"Logo horizontal","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/02_Logo_horizontal_v01.svg"},{"id":"03","name":"Ícone isolado","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/03_Icone_isolado_v01.svg"},{"id":"04","name":"Monograma circular v02","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/04_Monograma_circular_v02.svg"},{"id":"05","name":"Monocromática marrom","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/05_Logo_monocromatica_marrom_v01.svg"},{"id":"06","name":"Monocromática branca","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/06_Logo_monocromatica_branca_v01.svg","dark":true},{"id":"07","name":"Colorida para fundo escuro","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/07_Logo_colorida_fundo_escuro_v01.svg","dark":true},{"id":"08","name":"Ícone de app e perfil v02","group":"marca","status":"aprovado","file":"../assets/brand/aprovados/08_Icone_app_perfil_v02.svg"},{"id":"09","name":"Produtos","group":"navegacao","status":"pendente","file":"../assets/brand/icones-navegacao/01_produtos.svg"},{"id":"10","name":"Pedidos","group":"navegacao","status":"pendente","file":"../assets/brand/icones-navegacao/02_pedidos.svg"},{"id":"11","name":"Promoções","group":"navegacao","status":"pendente","file":"../assets/brand/icones-navegacao/03_promocoes.svg"},{"id":"12","name":"Minha Colheita","group":"navegacao","status":"pendente","file":"../assets/brand/icones-navegacao/04_minha-colheita.svg"},{"id":"13","name":"Conta com chapéu","group":"navegacao","status":"pendente","file":"../assets/brand/icones-navegacao/05_conta.svg"}];
+const KEY='colheita-ds-svg-review-v1';
+const store=(()=>{try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(_){return {}}})();
+function saved(id){return store[id]||{}}
+function state(item){return saved(item.id).status||item.status}
+function save(id,entry){store[id]={...saved(id),...entry,at:new Date().toISOString()};try{localStorage.setItem(KEY,JSON.stringify(store))}catch(_){document.getElementById('persistence-note').textContent='Armazenamento indisponível: exporte sua avaliação.';}update();}
+function make(item){const card=document.createElement('article');card.className='tile '+(item.group==='navegacao'?'nav':'');card.dataset.id=item.id;
+const title=document.createElement('h3');title.textContent=item.id+' · '+item.name;
+const sub=document.createElement('span');sub.className='caption';sub.textContent=item.group==='marca'?'Identidade já aprovada':'SVG para conferência de fidelidade';
+const canvas=document.createElement('div');canvas.className='canvas'+(item.dark?' dark':'');
+const img=document.createElement('img');img.src=item.file;img.alt='Arte SVG: '+item.name;img.loading='lazy';canvas.append(img);
+card.append(title,sub,canvas);
+if(item.group==='navegacao'){const a=document.createElement('div');a.className='actual';const sm=document.createElement('img');sm.src=item.file;sm.alt='';sm.loading='lazy';a.append(sm,document.createTextNode('24 px · escala de navegação'));card.append(a);}
+const buttons=document.createElement('div');buttons.className='buttons';
+for(const [value,label] of [['aprovado','✓ Aprovo'],['desaprovado','✕ Desaprovo']]){const btn=document.createElement('button');btn.type='button';btn.className='vote';btn.dataset.choice=value;btn.textContent=label;btn.setAttribute('aria-label',label+' '+item.name);btn.addEventListener('click',()=>save(item.id,{status:value}));buttons.append(btn);}
+const status=document.createElement('div');status.className='status';status.setAttribute('aria-live','polite');
+const note=document.createElement('textarea');note.className='reason';note.placeholder='Observação ou ajuste (opcional)';note.setAttribute('aria-label','Observação sobre '+item.name);note.value=saved(item.id).note||'';note.addEventListener('change',()=>save(item.id,{note:note.value}));
+card.append(buttons,status,note);return card;}
+function update(){let ok=0,fail=0,pending=0;for(const item of DATA){const card=document.querySelector('[data-id="'+item.id+'"]');if(!card)continue;const st=state(item);if(st==='aprovado')ok++;else if(st==='desaprovado')fail++;else pending++;card.querySelectorAll('.vote').forEach(b=>{const selected=b.dataset.choice===st;b.dataset.selected=String(selected);b.setAttribute('aria-pressed',String(selected));});const tag=card.querySelector('.status');tag.dataset.value=st;tag.textContent=st==='aprovado'?'✓ Aprovado':st==='desaprovado'?'✕ Desaprovado':'Aguardando revisão do SVG';}document.getElementById('progress').innerHTML='<span class="stat"><strong>'+ok+'</strong> aprovados</span><span class="stat"><strong>'+pending+'</strong> pendentes</span><span class="stat"><strong>'+fail+'</strong> desaprovados</span><span class="stat">'+DATA.length+' arquivos no total</span>';}
+for(const item of DATA){document.getElementById(item.group).append(make(item));}update();
+document.getElementById('export').addEventListener('click',()=>{const items=DATA.map(item=>({id:item.id,nome:item.name,arquivo:item.file,situacao:state(item),observacao:saved(item.id).note||'',avaliado_em:saved(item.id).at||null}));const payload={projeto:'Colheita Hortifruti',versao:'revisao-svg-v1',exportado_em:new Date().toISOString(),observacao:'Avaliação local; não enviada automaticamente ao GitHub',arquivos:items};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='colheita_avaliacao_svgs.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+document.getElementById('reset').addEventListener('click',()=>{if(confirm('Restaurar as oito aprovações anteriores e deixar os cinco novos pendentes?')){for(const k of Object.keys(store))delete store[k];try{localStorage.removeItem(KEY)}catch(_){}document.querySelectorAll('.reason').forEach(el=>el.value='');update();}});
+</script></body></html>
