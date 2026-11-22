@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Cesta com frutas e verduras">
+<title>Produtos · Colheita Hortifruti</title>
+<desc>Cesta com frutas e verduras. Vetorização para barra de navegação; desenho minimalista inspirado na prancha aprovada em 22/11/2026.</desc>
+
+<g stroke="#5B2E08" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M23 50 C20 45 22 38 29 36 C35 33 43 37 45 43 L47 54 H24 Z" fill="#E85D2A"/>
+  <path d="M34 36 L34 30 M34 31 Q40 25 44 29 Q40 34 34 31" fill="#6B8F2A" stroke-width="3.2"/>
+  <path d="M47 53 L49 37 Q51 28 58 28 Q67 28 68 37 L67 53 Z" fill="#F6A623"/>
+  <path d="M52 26 L51 21 M59 23 L60 19 M65 26 L69 22" stroke="#6B8F2A" stroke-width="3.5" fill="none"/>
+  <path d="M66 54 C64 47 67 41 73 42 Q78 35 82 43 Q89 45 85 54 Z" fill="#6B8F2A" stroke="#6B8F2A" stroke-width="3.5"/>
+  <path d="M10 55 Q10 52 14 52 H83 Q87 52 86 56 L81 82 Q81 86 77 86 H20 Q16 86 16 82 Z" fill="#FFF7EC"/>
+  <path d="M11 52 H86 V64 H11 Z" fill="#F6A623"/>
+  <path d="M26 73 H34 M42 73 H68 M76 73 H79" stroke-width="3.3"/>
+</g>
+
+</svg>
