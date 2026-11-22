@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Prancheta de pedidos com uma marca de conclusão">
+<title>Pedidos · Colheita Hortifruti</title>
+<desc>Prancheta de pedidos com uma marca de conclusão. Vetorização para barra de navegação; desenho minimalista inspirado na prancha aprovada em 22/11/2026.</desc>
+
+<g fill="none" stroke="#5B2E08" stroke-width="5.4" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="20" y="20" width="56" height="68" rx="9"/>
+  <path d="M34 21 Q34 15 40 15 H43 Q45 9 48 9 Q52 9 54 15 H58 Q62 15 62 21 V27 H34 Z" fill="#F6A623"/>
+  <path d="M49 42 H66 M49 66 H66" stroke-width="4"/>
+  <path d="M29 42 L35 48 L44 37" stroke="#6B8F2A" stroke-width="5.4"/>
+  <circle cx="33" cy="66" r="3.2" fill="#5B2E08" stroke="none"/>
+</g>
+
+</svg>
