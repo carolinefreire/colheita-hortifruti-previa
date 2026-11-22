@@ -2,6 +2,6 @@
 <!-- Revisão manual fiel à linguagem gráfica, ainda não é substituto aprovado do painel oficial. -->
 <g fill="none" stroke="#5B2E08" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.3">
 <circle cx="49" cy="18" r="14.2"/>
-<path d="M 18 64 V 58 C 18 41 31 36 49 36 C 67 36 80 41 80 58 V 64"/>
+<path d="M 18 64 V 58 C 18 41 31 36 49 36 C 67 36 80 41 80 58 V 64 M 18 64 H 80"/>
 </g>
 </svg>
