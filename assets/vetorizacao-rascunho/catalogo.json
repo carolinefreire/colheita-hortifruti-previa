@@ -10,7 +10,7 @@
         420
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 1848,
+      "contornos": 159,
       "faixa_corrigida": null
     },
     {
@@ -22,7 +22,7 @@
         213
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 866,
+      "contornos": 136,
       "faixa_corrigida": null
     },
     {
@@ -34,8 +34,8 @@
         418
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 443,
-      "faixa_corrigida": false
+      "contornos": 82,
+      "faixa_corrigida": true
     },
     {
       "id": "marca/icone-fundo-creme",
@@ -46,7 +46,7 @@
         418
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 196,
+      "contornos": 62,
       "faixa_corrigida": null
     },
     {
@@ -58,7 +58,7 @@
         381
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 357,
+      "contornos": 48,
       "faixa_corrigida": null
     },
     {
@@ -70,7 +70,7 @@
         387
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 427,
+      "contornos": 69,
       "faixa_corrigida": null
     },
     {
@@ -82,7 +82,7 @@
         551
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 92,
+      "contornos": 21,
       "faixa_corrigida": null
     },
     {
@@ -94,7 +94,7 @@
         551
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 85,
+      "contornos": 23,
       "faixa_corrigida": null
     },
     {
@@ -106,7 +106,7 @@
         550
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 92,
+      "contornos": 21,
       "faixa_corrigida": null
     },
     {
@@ -118,7 +118,7 @@
         550
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 168,
+      "contornos": 32,
       "faixa_corrigida": null
     },
     {
@@ -130,7 +130,7 @@
         550
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 107,
+      "contornos": 2,
       "faixa_corrigida": null
     },
     {
@@ -142,7 +142,7 @@
         550
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 79,
+      "contornos": 3,
       "faixa_corrigida": null
     },
     {
@@ -154,7 +154,7 @@
         831
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 279,
+      "contornos": 232,
       "faixa_corrigida": null
     },
     {
@@ -166,7 +166,7 @@
         833
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 125,
+      "contornos": 55,
       "faixa_corrigida": null
     },
     {
@@ -178,7 +178,7 @@
         833
       ],
       "estado": "rascunho pendente de conferencia visual",
-      "contornos": 159,
+      "contornos": 89,
       "faixa_corrigida": null
     }
   ]
