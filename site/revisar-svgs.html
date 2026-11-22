@@ -47,7 +47,7 @@ const KEY='colheita-ds-svg-review-v1';
 const store=(()=>{try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(_){return {}}})();
 function saved(id){return store[id]||{}}
 function state(item){return saved(item.id).status||item.status}
-function save(id,entry){store[id]={...saved(id),...entry,at:new Date().toISOString()};try{localStorage.setItem(KEY,JSON.stringify(store))}catch(_){document.getElementById('persistence-note').textContent='Armazenamento indisponível: exporte sua avaliação.';}update();}
+function save(id,entry){store[id]={...saved(id),...entry,at:new Date().toISOString()};try{localStorage.setItem(KEY,JSON.stringify(store))}catch(_){document.getElementById('progress').title='Armazenamento local indisponível: exporte a avaliação para preservar as escolhas.';}update();}
 function make(item){const card=document.createElement('article');card.className='tile '+(item.group==='navegacao'?'nav':'');card.dataset.id=item.id;
 const title=document.createElement('h3');title.textContent=item.id+' · '+item.name;
 const sub=document.createElement('span');sub.className='caption';sub.textContent=item.group==='marca'?'Identidade já aprovada':'SVG para conferência de fidelidade';
