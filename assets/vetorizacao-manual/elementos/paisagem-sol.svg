@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 161" role="img" aria-label="Paisagem com sol da Colheita, traçado manual em revisão">
+<!-- REFINAMENTO MANUAL EM CONFERENCIA. Nao substitui o painel oficial. -->
+
+<g stroke="#F6A623" fill="none" stroke-width="5" stroke-linecap="round">
+<path d="M 68 66 A 32 32 0 0 1 132 66"/>
+<path d="M 100 13 V 2 M 69 26 L 61 14 M 130 27 L 139 15 M 53 53 L 41 48 M 145 54 L 158 48"/>
+</g>
+<path d="M 0 94 C 48 78 80 77 99 92 C 124 77 165 80 196 97 L 196 161 L 0 161 Z" fill="#68BF2A"/>
+<path d="M 0 110 C 51 94 76 99 102 110 C 133 93 157 93 196 110 L 196 119 C 156 106 137 108 102 123 C 68 106 42 108 0 124 Z" fill="#FFF3E6"/>
+<path d="M 0 129 C 43 114 72 117 103 132 C 139 111 165 116 196 131 L 196 161 L 0 161 Z" fill="#68BF2A" fill-opacity=".48"/>
+<path d="M 0 142 C 46 132 72 135 103 147 C 134 131 168 134 196 147" stroke="#FFF3E6" stroke-width="5" fill="none"/>
+
+</svg>
