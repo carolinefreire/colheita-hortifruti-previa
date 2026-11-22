@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 215 158" role="img" aria-label="Padrão folhagens da Colheita, estudo de reconstrução manual">
 <!-- REFINAMENTO MANUAL EM CONFERENCIA. Nao substitui o painel oficial. -->
 
-<g fill="none" stroke="#5B2E08" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" opacity=".9">
+<g fill="none" stroke="#5B2E08" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" opacity=".9">
 <path d="M 47 10 C 41 28 47 41 65 47 C 67 26 59 16 47 10 Z M 47 10 L 65 47"/>
 <path d="M 83 0 C 83 20 94 32 107 35 C 112 16 101 5 83 0 Z M 83 0 L 107 35"/>
 <path d="M 169 8 C 142 15 133 35 140 58 C 163 50 174 30 169 8 Z M 140 58 C 150 38 158 25 169 8"/>
@@ -10,6 +10,7 @@
 <path d="M 158 86 C 139 90 127 110 132 128 C 151 123 161 107 158 86 Z M 132 128 L 158 86"/>
 <path d="M 23 130 C 37 129 50 138 54 157 C 37 155 26 146 23 130 Z M 23 130 L 54 157"/>
 <path d="M 183 119 C 196 129 206 140 208 157 M 183 119 C 180 134 186 147 203 150 C 205 136 199 124 183 119 Z"/>
+<path d="M 65 47 C 74 34 80 25 83 0 M 169 8 C 179 4 193 0 210 -1 M 103 72 C 94 112 88 124 84 147 M 158 86 C 151 124 149 139 157 158" stroke-width="1.4"/>
 </g>
 
 </svg>

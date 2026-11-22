@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 208 161" role="img" aria-label="Faixas do campo Colheita, traçado manual em revisão">
 <!-- REFINAMENTO MANUAL EM CONFERENCIA. Nao substitui o painel oficial. -->
 
-<path d="M 0 78 C 58 43 126 34 208 70 C 152 56 88 65 0 94 Z" fill="#68BF2A"/>
-<path d="M 0 107 C 72 73 142 70 208 88 C 142 85 69 110 0 125 Z" fill="#68BF2A"/>
-<path d="M 12 151 C 79 111 143 98 208 104 C 151 123 87 148 29 161 Z" fill="#F6A623"/>
-<path d="M 94 161 C 130 135 173 118 208 117 C 175 137 150 153 138 161 Z" fill="#E85D2A"/>
+<path d="M 0 78 C 58 43 126 34 208 70 C 148 58 85 65 0 87 Z" fill="#68BF2A"/>
+<path d="M 0 109 C 72 76 142 68 208 88 C 143 83 74 101 0 117 Z" fill="#68BF2A"/>
+<path d="M 12 149 C 80 111 147 98 208 104 C 151 121 89 146 29 158 Z" fill="#F6A623"/>
+<path d="M 94 161 C 129 135 174 116 208 117 C 173 137 146 153 134 161 Z" fill="#E85D2A"/>
 
 </svg>
