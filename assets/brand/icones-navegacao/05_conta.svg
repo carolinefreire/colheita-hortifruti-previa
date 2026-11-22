@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-label="Pessoa com chapéu de palha minimalista">
+<title>Conta · Colheita Hortifruti</title>
+<desc>Pessoa com chapéu de palha minimalista. Vetorização para barra de navegação; desenho minimalista inspirado na prancha aprovada em 22/11/2026.</desc>
+
+<g stroke="#5B2E08" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.8">
+ <path d="M21 86 Q23 69 39 64 L57 64 Q74 69 76 86 Z" fill="none"/>
+ <path d="M35 44 Q35 35 48 35 Q61 35 61 44 L61 54 Q60 67 48 67 Q36 67 35 54 Z" fill="#FFF7EC"/>
+ <path d="M28 39 Q31 18 47 18 Q64 18 67 39 Z" fill="#F6A623"/>
+ <path d="M15 42 Q17 35 31 34 Q48 30 65 34 Q80 36 83 42 Q85 49 76 51 L64 50 Q61 40 48 40 Q35 40 32 50 L20 51 Q12 49 15 42 Z" fill="#F6A623"/>
+</g>
+
+</svg>
