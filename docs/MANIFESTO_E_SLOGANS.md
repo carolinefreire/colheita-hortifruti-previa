@@ -1,6 +1,6 @@
 # Manifesto e propostas de slogan | Colheita Hortifruti
 
-**Todos os textos desta página são propostas, ainda não aprovadas.**
+**O slogan está aprovado. O manifesto e as outras propostas editoriais seguem em revisão.**
 
 ## Manifesto proposto
 
@@ -12,22 +12,21 @@ A Colheita existe para aproximar você do hortifruti do dia a dia, com variedade
 
 Porque uma mesa cheia de vida começa com escolhas mais simples.
 
-## Slogans candidatos (em avaliação)
+## Slogan oficial aprovado em 22/11/2026
 
-**Candidata principal em avaliação:** **Sua Colheita sem sair de casa.**
+**Sua Colheita sem sair de casa**
 
-**Outras candidatas preservadas:**
+Grafia aprovada: sem vírgula, sem mudança no nome da marca. Usar como assinatura textual, sem redesenhar o logotipo original.
 
-1. **Sua feira, sem a fila.** (rima curta; benefício da fila menos relevante)
-2. **Da banca pra sua bancada.** (jogo de palavras)
-3. **Mais feira. Menos correria.** (praticidade e ritmo)
+### Alternativas históricas, não oficiais
 
-**Proposta anterior, em reavaliação:** “Da horta pra sua porta.” Não é um slogan aprovado.
-
-**Status:** nenhum slogan aprovado. Não utilizar propostas como assinatura oficial da marca até decisão explícita.
+- Sua feira, sem a fila.
+- Da banca pra sua bancada.
+- Mais feira. Menos correria.
+- Da horta pra sua porta.
 
 ### Observação estratégica
 
 Evitar “tudo orgânico”, “direto do produtor”, “100% local” ou “sem agrotóxicos” como promessa geral, pois a operação também comercializa itens do CEASA e o status deve ser identificado por produto.
 
-**Decisões pendentes:** escolher o slogan definitivo e revisar e aprovar o manifesto.
+**Decisão pendente:** revisar e aprovar o manifesto.
